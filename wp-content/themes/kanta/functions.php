@@ -1,5 +1,10 @@
+<?php remove_action('wp_head', 'wp_generator'); ?>
 <?php
-
+    add_filter('xmlrpc_enabled','__return_false');
+    remove_action('wp_head', 'rsd_link');
+    remove_action('wp_head', 'wlwmanifest_link');
+?>
+<?php
 function qahana_scripts() {
     //CSS
     wp_enqueue_style('styel.css', get_stylesheet_uri());
@@ -29,11 +34,32 @@ function qahana_theme_setup() {
 }
 add_action('init', 'qahana_theme_setup');
 
+/*
+ * Theme support function
+ */
 add_theme_support('custom-background');
 add_theme_support('custom-header');
 add_theme_support('post-thumbnails');
-
 add_theme_support('post-formats', array('aside','image','video'));
+
+/*
+ * Sidebar function
+ */
+function qahana_widget_setup() {
+    register_sidebar(
+        array(
+            'name'          => 'Sidebar',
+            'id'            => 'sidebar-1',
+            'class'         => 'custom',
+            'description'   => 'Какое то описание для виджета',
+            'before_widget' => '<div class="widget">',
+            'before_title'  => '<h4 class="al-title"><span>',
+            'after_title'   => '</span></h4>',
+            'after_widget'  => '</div>'
+        )
+    );
+}
+add_action('widgets_init', 'qahana_widget_setup');
 
 /*
  * Include Walker File
