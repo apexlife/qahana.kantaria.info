@@ -1,0 +1,138 @@
+
+.al-main-contact{
+  padding-bottom: 85px;
+  h2{
+    margin-bottom: 50px;
+  }
+
+  h3{
+    font-size: 36px;
+    font-weight: 300;
+    color: $b;
+    text-align: center;
+    margin: 0 0 45px;
+
+  }
+
+  @media (max-width: 1200px) {
+    div#gmap_canvas{
+      height: 368px!important;
+    }
+  }
+
+  @media (max-width: 991px){
+    h3{
+      margin: 45px 0;
+    }
+    input[type='submit']{
+      display: block;
+      margin: 18px auto 0;
+      float: none!important;
+    }
+    .al-contact-info{
+      .col-md-6{
+        margin-bottom: 17px;
+      }
+    }
+      div#gmap_canvas{
+        height: 400px!important;
+      }
+    .pull-left{
+      float: none!important;
+      margin-top: 30px;
+    }
+    .pull-right{
+      float: none!important;
+    }
+  }
+
+
+  @media (max-width: 650px){
+    input[type='submit']{
+      width: 100%;
+    }
+    .al-map-wrapper{
+      div#gmap_canvas{
+        height: 300px!important;
+      }
+    }
+  }
+
+  .al-map-wrapper {
+
+    a[href^="http://maps.google.com/maps"]{display:none !important}
+    a[href^="https://maps.google.com/maps"]{display:none !important}
+
+    .gmnoprint a, .gmnoprint span, .gm-style-cc {
+      display:none;
+    }
+    .gmnoprint div {
+      background:none !important;
+    }
+  }
+  form{
+    margin-bottom: 96px;
+    input[type='text'],input[type='email'], textarea{
+      width: 100%;
+      font-size: 24px;
+      font-weight: 300;
+      outline: none;
+      border: 1px solid rgba($b, 0.15);
+      padding: 11px 20px;
+      margin-bottom: 12px!important;
+      @include placeholder-color($b);
+      &:last-of-type{
+        margin-bottom: 0;
+      }
+      @media (max-width: 1060px) {
+        font-size: 21px;
+      }
+    }
+    input[type='submit']{
+      background-color: #1c88d4;
+      color: $w;
+      padding: 12px 43px 11px;
+      font-size: 24px;
+      font-weight: 400;
+      border: none;
+      outline: none;
+      transition: all 0.5s ease;
+      float: right;
+      margin-top: 19px;
+      &:hover{
+        background-color: lighten(#1c88d4, 20%);
+      }
+    }
+    textarea{
+      height: 198px;
+      resize: none;
+      margin: 0;
+      @media (max-width: 1060px) {
+          height: 186px;
+          font-size: 21px;
+      }
+    }
+  }
+  .al-contact-info{
+    i{
+      margin-right: 10px;
+    }
+    .media-body{
+      vertical-align: middle;
+      p,a{
+        margin: 0;
+        font-size: 21px;
+        font-weight: 300;
+        color: rgba($b, 0.8);
+        &.al-st{
+          position: relative;
+          top: -5px;
+        }
+        @media (max-width: 1060px) {
+          font-size: 19px;
+        }
+
+      }
+    }
+  }
+}

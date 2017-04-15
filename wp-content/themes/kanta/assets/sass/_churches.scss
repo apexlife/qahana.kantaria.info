@@ -1,0 +1,98 @@
+main.al-main-churches-page{
+  h2{
+    margin: 50px 0 35px;
+  }
+  img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  h3{
+    margin: 0 0 20px;
+    a{
+      font-size: 24px;
+      font-weight: 500;
+      color: #000;
+      transition: all 0.5s ease;
+      &:hover{
+        color: #1c88d4;
+      }
+    }
+  }
+  p{
+    margin: 0;
+    font-size: 20px;
+    font-weight: 300;
+    color: #000;
+    line-height: 30px;
+    a{
+      color: #a7a8a8;
+      border-bottom: 1px solid #a7a8a8;
+    }
+  }
+
+  figure{
+    height: 340px;
+    @media (max-width: 991px) {
+      height: 450px;
+    }
+  }
+  .col-md-6{
+    margin-bottom: 30px;
+    article.paragraph{
+      position: absolute;
+      width: 406px;
+      height: 287px;
+      padding: 0 30px;
+      top: 50%;
+      right: 15px;
+      margin-top: -143px;
+      background-color: #fff;
+      @include background-clip(padding-box);
+      @include box-shadow(0 0 16px rgba(0,0,0,.08));
+      &.al-style-2{
+        left: 15px;
+        @media (max-width: 991px) {
+          left: 30px;
+        }
+        @media (max-width: 767px) {
+          left: 50%;
+          margin-left: -203px;
+        }
+      }
+
+      .wrapper{
+        position: relative;
+        top: 50%;
+        @include prefix(transform, translateY(-50%));
+      }
+      @media (max-width: 991px) {
+        right: 30px;
+      }
+      @media (max-width: 767px) {
+        right: 50%;
+        margin-right: -203px;
+      }
+      @media (max-width: 490px) {
+        margin-right: -140px;
+        width: 280px;
+        p{
+          font-size: 16px;
+          line-height: 24px;
+        }
+        h3{
+          a{
+            font-size: 20px;
+          }
+        }
+        &.al-style-2{
+          margin-left: -140px;
+        }
+      }
+    }
+  }
+
+  nav{
+    margin: 33px 0 45px;
+  }
+}

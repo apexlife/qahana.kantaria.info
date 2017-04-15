@@ -1,0 +1,41 @@
+//Global@@@@@@@@@@@@@
+
+.panel-group{
+  .panel{
+    box-shadow: none;
+    border: none;
+    .panel-heading{
+      padding: 0;
+      background-color: transparent;
+      border-bottom: 1px solid #d9d9d9;
+      h4{
+        a{
+          padding: 30px 15px 23px 0;
+          font-size: 24px;
+          font-weight: 300;
+          color: #000;
+          display: block;
+          .more-less {
+            float: right;
+            color: #212121;
+          }
+        }
+      }
+    }
+    .panel-body{
+      padding: 22px;
+      border: none!important;
+      font-size: 21px;
+      color: $b;
+      font-weight: 300;
+    }
+  }
+}
+
+
+
+.al-main-treatment{
+  .al-head-title{
+    margin-bottom: 42px;
+  }
+}

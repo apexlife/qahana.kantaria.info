@@ -1,0 +1,110 @@
+#al-news-navbar{
+  .al-border-bottom{
+    border-bottom: 1px solid rgba(0,0,0, 0.3);
+  }
+  .navbar-collapse {
+    text-align: left;
+    .navbar-nav {
+      .al-menu-parts {
+        color: $b;
+        padding: 10px 20px;
+        &:hover {
+          color: #448aff;
+          background-color: transparent !important;
+        }
+        &:active {
+          background-color: transparent !important;
+          color: #448aff;
+        }
+        &:focus {
+          background-color: transparent !important;
+          color: #448aff;
+        }
+        &.al-random {
+          padding-left: 0;
+        }
+        .dropdown-arrow-black {
+          vertical-align: middle;
+          margin-left: 14px;
+        }
+      }
+    }
+    .al-news-search-box{
+      text-align: right;
+
+      form{
+        display: inline-block;
+        margin-right: 30px;
+
+        input[type='submit'] {
+          border: none;
+          outline: none;
+          position: relative;
+          top: 2px;
+        }
+        &:hover {
+          input[type=search] {
+            width: 120px;
+            padding-left: 20px;
+            color: #000;
+            background-color: #fff;
+            cursor: auto;
+            visibility: visible;
+            opacity: 1;
+            margin-right: 10px;
+          }
+        }
+
+
+        input[type=search]:focus {
+          width: 120px;
+          padding-left: 20px;
+          color: #000;
+          background-color: #fff;
+          cursor: auto;
+          visibility: visible;
+          opacity: 1;
+          margin-right: 10px;
+        }
+        input {
+          outline: none;
+        }
+        input[type=search] {
+          -webkit-appearance: textfield;
+          -webkit-box-sizing: content-box;
+          font-family: inherit;
+          font-size: 100%;
+        }
+        input::-webkit-search-decoration,
+        input::-webkit-search-cancel-button {
+          display: none;
+        }
+
+
+        input[type=search] {
+          border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+          border-right: none;
+          border-left: none;
+          border-top: none;
+          width: 20px;
+          -webkit-transition: all .5s;
+          -moz-transition: all .5s;
+          transition: all .5s;
+        }
+        input[type=search] {
+          width: 0;
+          height: 30px;
+          padding-left: 0;
+          color: transparent;
+          cursor: pointer;
+          visibility: hidden;
+          opacity: 0;
+        }
+
+      }
+      a{
+        vertical-align: middle;
+      }
+    }
+  }
+}

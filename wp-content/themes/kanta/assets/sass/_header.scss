@@ -1,0 +1,68 @@
+header.main-header{
+  position: relative;
+  .black{
+    background-color: #1a1a1a;
+    min-height: 140px;
+    .al-header-logo-content{
+      margin-top: 15px;
+      .media-body{
+        vertical-align: middle;
+      }
+        a{
+          display: inline-block;
+          color: $w;
+          margin-bottom: 0;
+          margin-left: 16px;
+          h1{
+            font-size: 24px;
+            font-weight: 500;
+            text-transform: uppercase;
+            line-height: 24px;
+            margin: 0 0 5px;
+          }
+          h2{
+            margin: 0;
+            font-size: 20px;
+            font-weight: 500;
+            text-transform: uppercase;
+            line-height: 20px;
+          }
+        }
+    }
+
+    .today{
+      float: left;
+      color: $w;
+      margin: 12px 30px 0 0;
+      strong{
+        font-family: $ex;
+        font-weight: 700;
+        font-size: 72px;
+        float: left;
+      }
+      figure{
+        padding-top: 21px;
+        float: left;
+        sup{
+          display: block;
+          font-size: 30px;
+          font-weight: 500;
+        }
+        sub{
+          position: relative;
+          bottom: 11px;
+          font-size: 20px;
+          font-weight: 300;
+        }
+      }
+    }
+    .header-quote{
+      margin-top: 46px;
+      float: left;
+      font-size: 22px;
+      line-height: 22px;
+      font-weight: 300;
+      color: $w;
+    }
+  }
+}

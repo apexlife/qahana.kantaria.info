@@ -1,0 +1,51 @@
+@function em($px, $body:14) {
+    @return ($px/$body)+em;
+}
+
+//Px to procent
+
+@function proc($target, $context:320) {
+    @return ($target/$context)*100%;
+}
+
+//Letter Spacing Photoshop to css
+@function lt($lt) {
+	@return $lt/1000+em;
+}
+
+//Box sizing
+@mixin bt($type:border-box) {
+  -webkit-box-sizing: $type;
+  -moz-box-sizing:    $type;
+  box-sizing:         $type;
+}
+
+//prefix for all browsers
+@mixin prefix ($property, $value,
+                 $moz:    true,
+                 $webkit: true,
+                 $o:      false,
+                 $ms:     true,
+                 $spec:   true) {
+    @if $moz    {    -moz-#{$property}: $value; }
+    @if $webkit { -webkit-#{$property}: $value; }
+    @if $o      {      -o-#{$property}: $value; }
+    @if $ms     {     -ms-#{$property}: $value; }
+    @if $spec   {         #{$property}: $value; }
+}
+
+//placeholder prefix for all browsers
+@mixin placeholder-color($color) {
+  &::-webkit-input-placeholder {
+      color: $color;
+  }
+  &:-moz-placeholder {
+      color: $color;
+  }
+  &::-moz-placeholder {
+      color: $color;
+  }
+  &:-ms-input-placeholder {
+      color: $color;
+  }
+}

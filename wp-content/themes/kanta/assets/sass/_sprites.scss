@@ -1,0 +1,52 @@
+.logo, .long-left-arrow, .long-right-arrow, .camera, .slide-arrow-left,.play-big, .camera-small, .view-white, .clock-white,
+.al-search-black, .al-fc-news-black, .vk-grey-small, .tw-grey-small, .fb-grey-small, .fax-icon, .message-icon, .phone-icon, .location-icon,
+.slide-arrow-right, .vk, .play, .tw, .clock, .vk-grey, .tw-grey, .fb-grey,.clock-small,.vk-footer, .tw-footer, .fb-footer,
+.dropdown-arrow-black,.blue-arrow, .download-button, .visible-48, .download-48, .arrow-left-small, .arrow-right-small,.arrow-grey-down,
+.dropdown-arrow-active, .dropdown-arrow, .fc, .calendar-arrow-left, .calendar-arrow-right, .plus-math-48, .minus,
+{ display: inline-block; background: url('assets/img/sprite.png') no-repeat; overflow: hidden; text-indent: -9999px; text-align: left; }
+
+.vk-footer { background-position: -0px -602px; width: 24px; height: 14px; }
+.tw-footer { background-position: -24px -602px; width: 22px; height: 18px; }
+.fb-footer { background-position: -46px -602px; width: 12px; height: 22px; }
+.vk-grey { background-position: -0px -273px; width: 27px; height: 15px; }
+.tw-grey { background-position: -27px -273px; width: 25px; height: 20px; }
+.fb-grey { background-position: -0px -288px; width: 13px; height: 25px; }
+.logo { background-position: -0px -0px; width: 61px; height: 108px; }
+.long-left-arrow { background-position: -0px -108px; width: 48px; height: 28px; }
+.long-right-arrow { background-position: -0px -136px; width: 48px; height: 28px; }
+.camera { background-position: -0px -164px; width: 32px; height: 26px; }
+.slide-arrow-left { background-position: -32px -164px; width: 29px; height: 45px; }
+.slide-arrow-right { background-position: -0px -190px; width: 29px; height: 45px; }
+.vk { background-position: -29px -209px; width: 27px; height: 15px; }
+.play { background-position: -29px -224px; width: 26px; height: 26px; }
+.tw { background-position: -0px -235px; width: 25px; height: 20px; }
+.clock { background-position: -25px -250px; width: 18px; height: 18px; }
+.dropdown-arrow-active { background-position: -43px -250px; width: 14px; height: 9px; }
+.dropdown-arrow { background-position: -0px -255px; width: 14px; height: 9px; }
+.fc { background-position: -48px -108px; width: 13px; height: 25px; }
+.calendar-arrow-left { background-position: -48px -133px; width: 9px; height: 18px; }
+.calendar-arrow-right { background-position: -14px -255px; width: 9px; height: 18px; }
+.dropdown-arrow-black { background-position: -0px -313px; width: 14px; height: 9px; }
+.al-search-black { background-position: -0px -322px; width: 23px; height: 24px; }
+.al-fc-news-black { background-position: -23px -322px; width: 13px; height: 25px; }
+.blue-arrow { background-position: -0px -347px; width: 32px; height: 32px; }
+.download-button { background-position: -0px -379px; width: 32px; height: 32px; }
+.visible-48 { background-position: -32px -347px; width: 18px; height: 12px; }
+.download-48 { background-position: -32px -359px; width: 16px; height: 16px; }
+.vk-grey-small { background-position: -0px -411px; width: 21px; height: 12px; }
+.tw-grey-small { background-position: -21px -411px; width: 18px; height: 15px; }
+.fb-grey-small { background-position: -39px -411px; width: 10px; height: 18px; }
+.play-big { background-position: -0px -429px; width: 52px; height: 52px; }
+.camera-small { background-position: -0px -481px; width: 25px; height: 21px; }
+.view-white { background-position: -25px -481px; width: 18px; height: 12px; }
+.clock-white { background-position: -43px -481px; width: 13px; height: 13px; }
+.clock-small { background-position: -0px -502px; width: 13px; height: 13px; }
+.arrow-left-small { background-position: -0px -515px; width: 15px; height: 24px; }
+.arrow-right-small { background-position: -15px -515px; width: 15px; height: 24px; }
+.fax-icon { background-position: -0px -539px; width: 30px; height: 30px; }
+.message-icon { background-position: -30px -539px; width: 30px; height: 22px; }
+.phone-icon { background-position: -30px -561px; width: 25px; height: 25px; }
+.location-icon { background-position: -0px -569px; width: 23px; height: 33px; }
+.plus-math-48 { background-position: -0px -624px; width: 26px; height: 26px; }
+.minus { background-position: -26px -624px; width: 26px; height: 6px; }
+.arrow-grey-down { background-position: -0px -650px; width: 14px; height: 9px; }

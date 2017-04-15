@@ -1,0 +1,133 @@
+
+
+main.al-main-holidays{
+  section{
+    h3{
+      margin-top: 40px;
+      font-size: 36px;
+      font-weight: 500;
+      color: $b;
+    }
+
+    article{
+      padding-bottom: 12px;
+      border-bottom: 1px solid #d9d9d9;
+      &:last-of-type{
+        border-bottom: none;
+      }
+      .al-holidays-title{
+        margin: 40px 0 45px;
+        h4{
+          a {
+            font-weight: 400;
+            font-size: 30px;
+            color: $b;
+          }
+        }
+        .media-right{
+          span{
+            font-size: 26px;
+            color: rgba($b, 0.5);
+            font-weight: 300;
+          }
+        }
+      }
+      p{
+        margin-bottom: 38px;
+        font-weight: 300;
+        font-size: 24px;
+        line-height: 36px;
+      }
+    }
+    @media (max-width: 640px){
+      article{
+        .al-holidays-title{
+          .media-heading{
+            a{
+              font-size: 24px;
+            }
+          }
+          .media-right{
+            span{
+              font-size: 20px;
+            }
+          }
+        }
+        p{
+          font-size: 18px;
+          line-height: 28px;
+        }
+      }
+    }
+  }
+  aside{
+    margin-top: 52px;
+    .holidays-calendar{
+      .actions{
+        label{
+          width: 75px;
+          position: relative;
+          height: 30px;
+          vertical-align: middle;
+          select {
+            width: 100%;
+            cursor: pointer;
+            outline: none;
+            position: absolute;
+            background-color: transparent;
+            z-index: 2;
+            border: none;
+            appearance:none;
+            -moz-appearance:none;
+            -webkit-appearance:none;
+            font-size: 22px;
+            font-weight: 300;
+            color: rgba($b,0.5);
+
+            option{
+              outline: none;
+              border: none;
+            }
+          }
+          span{
+            z-index: 1;
+            position: absolute;
+            right: 0;
+            top: 10px;
+            margin-left: 10px;
+          }
+        }
+        a{
+          margin-left: 38px;
+          border-bottom: 1px solid rgba($b,0.5);
+          font-size: 22px;
+          font-weight: 300;
+          color: rgba($b,0.5);
+        }
+      }
+      .panel-body{
+        padding: 0 22px 22px 0;
+        ul{
+          padding: 0;
+          list-style: none;
+          li{
+            padding-left: 22px;
+            border-bottom: 1px solid #ededed;
+            h3{
+
+              font-size: 21px;
+              color: $b;
+              font-weight: 300;
+            }
+            p{
+              font-size: 21px;
+              color: rgba($b,0.7);
+              font-weight: 300;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}

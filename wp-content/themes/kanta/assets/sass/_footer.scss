@@ -1,0 +1,125 @@
+footer.main-footer{
+  background-color: #303030;
+  padding-top: 48px;
+  color: $w;
+  h3{
+    font-size: 26px;
+    font-weight: 500;
+    margin: 0;
+  }
+  .row{
+    &:first-of-type{
+      padding-bottom: 99px;
+    }
+  }
+
+  .al-copyright{
+    a{
+      img{
+        opacity: 0.4;
+      }
+    }
+    p{
+      margin-top: 15px;
+      line-height: 28px;
+      padding-left: 18px;
+      font-size: 22px;
+      font-weight: 500;
+      text-transform: uppercase;
+      color: rgba($w,0.4);
+    }
+
+  }
+  .al-about{
+    .textwidget{
+      margin-top: 22px;
+      font-size: 22px;
+      line-height: 28px;
+      font-weight: 300;
+      color: rgba($w, 0.4);
+    }
+  }
+  .al-actions{
+    ul{
+      list-style: none;
+      padding: 0;
+      margin-top: 22px;
+      li{
+        margin-bottom: 10px;
+        a{
+          font-weight: 300;
+          font-size: 22px;
+          border-bottom: 1px solid rgba($w, 0.4);
+          color: rgba($w, 0.4);
+        }
+      }
+    }
+  }
+  .al-social{
+    p{
+      color: rgba(255, 255, 255, 0.4);
+      margin-top: 22px;
+      font-weight: 300;
+      font-size: 22px;
+    }
+    fieldset{
+      margin-top: 23px;
+      position: relative;
+      input[type="email"]{
+        width: 100%;
+        background-color: #fff;
+        font-weight: 300;
+        font-size: 22px;
+        outline: none;
+        border: none;
+        padding: 18px 78px 14px 25px;
+        color: $b;
+        @include placeholder-color($b);
+      }
+      input[type='submit']{
+        background-color: #1c88d4;
+        padding: 11px 16px 10px;
+        border: none;
+        outline: none;
+        font-size: 30px;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+  .al-copyright-bottom{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 22px 0;
+    background-color: #191919;
+    p{
+      margin: 0;
+      font-size: 20px;
+      font-weight: 300;
+      color: rgba($w, 0.4);
+    }
+    ul{
+      padding: 0;
+      width: 100%;
+      list-style: none;
+      margin: 0;
+      &:after{
+        content: '';
+        clear: both;
+        display: block;
+      }
+      li{
+        float: right;
+        margin-left: 21px;
+        &:last-of-type{
+          margin-left: 0;
+        }
+        a{
+          vertical-align: bottom;
+        }
+      }
+    }
+  }
+}

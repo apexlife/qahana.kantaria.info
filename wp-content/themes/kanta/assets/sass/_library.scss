@@ -1,0 +1,262 @@
+#al-library-header{
+  @extend #al-news-header;
+}
+#al-library-navbar{
+  @extend #al-news-navbar;
+}
+.al-main-library-page{
+  h2{
+    font-weight: 500;
+    font-size: 48px;
+    color: $b;
+  }
+  p{
+    font-size: 36px;
+    color: $b;
+    font-weight: 400;
+    margin: 30px 0 45px;
+  }
+  #al-categories{
+    .al-toggle {
+      margin-right: 24px;
+      float: right;
+      overflow: hidden;
+      cursor: pointer;
+    }
+    span{
+      display: inline-block;
+      float: right;
+      font-size: 24px;
+      font-weight: 300;
+      line-height: 25px;
+    }
+
+    div.toggle {
+      width: 22px;
+      height: 3px;
+      background-color: black;
+      display: block;
+      margin-top: 4px;
+    }
+
+    div#content {
+      position: absolute;
+      width: 240px;
+      right: 200px;
+      padding: 15px 5px;
+      z-index: 1000;
+      top: 0;
+      background-color: $w;
+      display:none;
+      -moz-box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+      -webkit-box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.08);
+    }
+
+    div#content ul {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+    }
+
+    div#content ul li {
+      padding-left: 15px;
+      padding-bottom: 3px;
+      position: relative;
+    }
+
+    div#content ul li a {
+      color: $b;
+      text-decoration: none;
+      font-size: 16px;
+      transition: all 0.5s ease;
+      &:hover{
+        color: #448aff;
+      }
+    }
+    
+
+    .aktif1 {
+      transform: rotate(45deg);
+      transition: all 0.5s ease;
+    }
+
+    .aktif2 {
+      transform: rotate(-45deg);
+      transition: all 0.5s ease;
+    }
+
+    .aktif3 {
+      margin-left: -200px;
+      transition: all 0.5s ease;
+    }
+
+    @media screen and (max-width:768px){
+      section{position:absolute;left:45%;}
+      div#content{display:none;width:98%;height:auto;margin-top:75px;}
+      div#content ul li{display:block;padding-top:10px;width:120px;left:0;right:0;margin-left:auto;margin-right:auto;}
+    }
+  }
+  .content-inner{
+    @include box-shadow(0 0 16px rgba(0,0,0,.08));
+    margin-bottom: 40px;
+    &:after{
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .about{
+      float: left;
+      width: 64%;
+      padding: 29px 25px 0 18px;
+      .al-main-name{
+        font-size: 22px;
+        font-weight: 300;
+        color: $b;
+        line-height: 26px;
+      }
+      .wrapper-rating{
+        display: inline-block;
+        width: 100%;
+        padding: 18px 0 7px;
+        border-bottom: 1px solid rgba($b,0.1);
+        form{
+          float: left;
+          fieldset {
+            border: 0;
+            width: auto;
+
+            $unchecked-star: '\2606';
+            $unchecked-color: #888;
+            $checked-star: '\2605';
+            $checked-color: #ff5253;
+
+            .star-cb-group {
+              /* remove inline-block whitespace */
+              font-size: 0;
+              * {
+                font-size: 24px;
+              }
+              /* flip the order so we can use the + and ~ combinators */
+              unicode-bidi: bidi-override;
+              direction: rtl;
+              & > input {
+                display: none;
+                & + label {
+                  /* only enough room for the star */
+                  display: inline-block;
+                  overflow: hidden;
+                  text-indent: 9999px;
+                  width: 0.9em;
+                  white-space: nowrap;
+                  cursor: pointer;
+                  &:before {
+                    display: inline-block;
+                    text-indent: -9999px;
+                    content: $unchecked-star;
+                    color: $unchecked-color;
+                  }
+                }
+                &:checked ~ label:before,
+                & + label:hover ~ label:before,
+                & + label:hover:before {
+                  content: $checked-star;
+                  color: #e52;
+                }
+              }
+
+              /* the hidden clearer */
+              & > .star-cb-clear + label {
+                text-indent: -9999px;
+                width: .5em;
+                margin-left: -.5em;
+              }
+              & > .star-cb-clear + label:before {
+                width: .5em;
+              }
+
+              &:hover > input + label:before {
+                content: $unchecked-star;
+                color: $unchecked-color;
+                text-shadow: none;
+              }
+              &:hover > input + label:hover ~ label:before,
+              &:hover > input + label:hover:before {
+                content: $checked-star;
+                color: $checked-color;
+                text-shadow: 0 0 1px #333;
+              }
+            }
+          }
+        }
+        ul{
+          margin-top: 8px;
+          padding: 0;
+          list-style: none;
+          float: right;
+          overflow: hidden;
+          li{
+            display: table-cell;
+            a{
+              margin-right: 7px;
+            }
+          }
+        }
+      }
+      .statistic{
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: inline-block;
+        width: 100%;
+        li{
+          padding-top: 7px;
+          float: left;
+          font-size: 18px;
+          color: rgba($b,0.6);
+          margin-right: 10px;
+          &:last-of-type{
+            margin-right: 0;
+          }
+          i{
+            vertical-align: middle;
+            margin-right: 6px;
+          }
+          a{
+            position: relative;
+            top: -3px;
+          }
+        }
+      }
+    }
+
+    figure{
+      width: 36%;
+      float: left;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        border-top-right-radius: 8px;
+        border-bottom-right-radius: 8px;
+      }
+    }
+  }
+  .al-view-all{
+    padding-top: 10px;
+    text-align: center;
+    margin-bottom: 50px;
+    a{
+      display: inline-block;
+      font-size: 22px;
+      font-weight: 400;
+      color: $w;
+      background-color: #1c88d4;
+      padding: 11px  39px;
+      transition: all 0.5s ease;
+      &:hover{
+        background-color: lighten(#1c88d4, 20%);
+      }
+    }
+  }
+}

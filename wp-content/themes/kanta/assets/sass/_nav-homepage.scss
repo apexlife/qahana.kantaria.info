@@ -1,0 +1,83 @@
+nav.navbar-default{
+  background-color: transparent;
+  border: none;
+  margin-bottom: 0;
+  .al-border-bottom{
+    border-bottom: 1px solid rgba($w, 0.3);
+    padding: 25px 0;
+  }
+  .navbar-collapse{
+    text-align: center;
+    .navbar-nav{
+      display: inline-block;
+      float: none;
+      li{
+        a{
+          padding: 10px 25px;
+
+          &.dropdown-toggle{
+            &:hover{
+              background-color: transparent;
+              color: #448aff;
+              i{
+                background-position: -43px -250px;
+              }
+            }
+            &:focus{
+              background-color: transparent;
+              color: #448aff;
+              i{
+                background-position: -43px -250px;
+              }
+            }
+          }
+        }
+        .dropdown-menu{
+          padding: 30px 0 52px;
+          li{
+            strong{
+              display: inline-block;
+              margin-bottom: 8px;
+              padding: 3px 15px;
+              cursor: default;
+              font-size: 22px;
+              font-weight: 400;
+            }
+            a{
+              font-size: 20px;
+              padding: 3px 15px;
+              font-weight: 300;
+              &:hover{
+                background-color: transparent;
+                color: #2e5f97;
+              }
+            }
+          }
+        }
+      }
+      .al-menu-parts{
+        font-weight: 400;
+        color: $w;
+        font-size: 21px;
+        transition: all 0.5s ease;
+        background: transparent!important;
+        &:hover{
+          color: #448aff;
+          background-color: transparent!important;
+        }
+        &:active{
+          background-color: transparent!important;
+          color: $w;
+        }
+        &:focus{
+          background-color: transparent!important;
+          color: $w;
+        }
+      }
+    }
+  }
+  .al-drop-menu-arrow{
+    margin-left: 14px;
+    vertical-align: middle;
+  }
+}

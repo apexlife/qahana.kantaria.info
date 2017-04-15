@@ -1,0 +1,961 @@
+/*
+  Theme Name: Qahana
+  Theme URI: http://qahana.am
+  Author: Kantaria Mikheili
+  Author URI: http://kantaria.info
+  Description: This is an qahana themes
+  Version: 0.1 alpha
+  License: GNU General Public License v2 or later
+  License URI: http://www.gnu.org/licenses/gpl-2.0.html
+  Tags: Church
+*/
+//fonts
+$rb:'Roboto', sans-serif;
+$ex: 'Exo 2', sans-serif;
+
+//color
+$w: #ffffff;
+$b: #000000;
+
+@import "compass/css3";
+@import "bootstrap";
+@import "mixin";
+@import "sprites";
+@import "stickyFooter";
+
+//necessary plugins
+@import "plugins/owl.carousel";
+@import "plugins/owl.theme.default";
+@import "plugins/lavalamp";
+
+//all pages
+@import "header";
+@import "footer";
+@import "aside";
+@import "nav-for-all";
+@import "nav-homepage";
+@import "pagination";
+@import "news";
+@import "library";
+@import "media";
+@import "contact";
+@import "treatment";
+@import "holidays";
+@import "churches";
+@import "leaders";
+@import "animate";
+
+article{
+  img{
+    max-width:100%;
+  }
+}
+
+
+a{
+  &:hover{
+    text-decoration: none;
+  }
+  &:focus{
+    outline: none;
+    color: #000;
+    text-decoration: none;
+  }
+}
+
+h2.al-head-title{
+  font-weight: 500;
+  font-size: 48px;
+  color: #000000;
+  margin-top: 50px;
+}
+//Breadcrumbs style global @@@@@@@@@@@@@@@@@@@
+#al-breadcrumbs-glob{
+  background-color: transparent;
+  padding: 8px 0px;
+  li{
+    font-size: 21px;
+    font-weight: 400;
+    color: $b;
+    a{
+      color: #838282;
+      font-weight: 300;
+    }
+  }
+}
+//Tabs global style @@@@@@@@@@@@@@@@@@@@@
+.al-global-style-tabs{
+  margin: 0;
+  display: inline-block;
+  &:after{
+    content: "";
+    clear: both;
+    display: block;
+  }
+  li{
+    margin: 0;
+    padding: 3px 0px;
+    a{
+      display: inline-block;
+      font-weight: 400;
+      font-size: 22px;
+      text-decoration: none;
+      color: rgba($b, 0.7);
+      transition: all 0.5s ease;
+      padding: 16px 50px;
+      &:hover{
+        color: $b;
+      }
+    }
+  }
+}
+
+//lavalamp style global @@@@@@@@@@@@@@@
+.lavalamp-object {
+  background-color: #448aff;
+  height: 3px!important;
+  bottom: 0!important;
+  top: initial!important;
+  left: 0!important;
+}
+
+//Date and views count global @@@@@@@@@@@@@@@@@
+.al-date-and-views{
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba($b,0.7);
+  cursor: default;
+  display: block;
+  i{
+    margin-right: 7px;
+  }
+  span{
+    margin-right: 22px;
+  }
+}
+
+//Title with border bottom global @@@@@@@@@@@@@@@@
+.al-title{
+  border-bottom: 1px solid rgba(#000, .15);
+  line-height: 20px;
+  span{
+    background-color: $w;
+    font-size: 48px;
+    font-weight: 500;
+    color: $b;
+    padding: 0 27px 0 15px;
+  }
+}
+
+//Publication Info global @@@@@@@@@@@@@@@
+
+.al-pub-info{
+  margin-top: 16px;
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 26px;
+  color: rgba($b, 0.7);
+  cursor: default;
+  i{
+    position: relative;
+    margin-right: 8px;
+    top: 2px;
+  }
+}
+
+//Link style global @@@@@@@@@@@@@@@@@@
+
+.al-more{
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 26px;
+  color: $b;
+  border-bottom: 1px solid #000;
+  transition: all 0.5s ease;
+  &:hover{
+    text-decoration: none;
+    color: #2e5f97;
+  }
+}
+
+
+//Button see more global @@@@@@@@@@@@@@@@@@@@
+.see-more{ // Todo : fix duplicates #true_loadmore
+  border: 1px solid rgba( #000, 0.3);
+  margin-bottom: 92px;
+  a{
+    display: block;
+    text-align: center;
+    color: #000;
+    font-weight: 300;
+    font-size: 22px;
+    line-height: 51px;
+    transition: all 0.5s ease;
+    &:hover{
+      background-color: #000;
+      color: $w;
+    }
+  }
+}
+#true_loadmore {
+  display: block;
+  text-align: center;
+  color: #000;
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 51px;
+  transition: all 0.5s ease;
+  border: 1px solid rgba( #000, 0.3);
+  margin-bottom: 92px;
+  &:hover{
+    background-color: #000;
+    color: $w;
+  }
+}
+
+
+//Image radius style global @@@@@@@@@@@@@@@@@
+.al-radius{
+  @include border-radius(8px);
+  @include background-clip(padding-box);
+}
+//rebuild tab panel style global @@@@@@@@@@@@
+.nav.nav-tabs{
+  li{
+    &.active{
+      a{
+        border: none;
+        &:hover{
+          background: none;
+        }
+        &:focus{
+          border: none;
+          outline: none;
+          background: none;
+        }
+        &:active{
+          border: none;
+          outline: none;
+          background: none;
+        }
+      }
+    }
+    a{
+      text-align: center;
+      font-size: 24px;
+      border: none;
+      &:hover{
+        background: none;
+      }
+      &:focus{
+        border: none;
+        outline: none;
+        background: none;
+      }
+      &:active{
+        border: none;
+        outline: none;
+        background: none;
+      }
+    }
+  }
+}
+
+
+header.large-main-page{
+  position: relative;
+  .al-main-bg{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    object-fit: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    background-attachment: fixed;
+    &:before{
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-image: url(assets/img/tulle.png);
+      background-position: 0 85%;
+      z-index:-1;
+    }
+  }
+
+  section.vh-full{
+    position: relative;
+    min-height: calc(100vh - 231px);
+    height:100%;
+    overflow: hidden;
+    .al-wrapper-v{
+      height: calc(100vh - 445px);
+      display: table;
+      .al-main-news{
+        display: table-cell;
+        vertical-align: middle;
+        a.al-news-btn{
+          display: inline-block;
+          background-color: #448aff;
+          font-weight: 400;
+          color: $w;
+          font-size: 24px;
+          padding: 8px 29px;
+          text-decoration: none;
+          @include prefix(transition, all 0.5s ease);
+          @include prefix(border-radius, 8px);
+          &:hover{
+            background-color: darken(#448aff, 20%);
+          }
+        }
+        h1{
+          a{
+            font-family: $ex;
+            font-weight: 700;
+            font-size: 72px;
+            color: $w;
+          }
+        }
+        p{
+          a{
+            font-weight: 400;
+            font-size: 24px;
+            color: $w;
+          }
+        }
+      }
+    }
+    .carousel-news{
+      .al-line{
+        height: 1px;
+        background-color:  rgba(255, 255, 255, 0.3);
+        margin-bottom: 28px;
+      }
+      .owl-carousel{
+        clear: both;
+        .owl-nav{
+          display: block!important;
+          position: absolute;
+          right: 3px;
+          top: -57px;
+          .owl-prev{
+            background-position: -0px -108px!important;
+            background: url(assets/img/sprite.png) no-repeat;
+            overflow: hidden;
+            text-indent: -9999px;
+            text-align: left;
+          }
+          .owl-next{
+            background-position: -0px -136px!important;
+            background: url(assets/img/sprite.png) no-repeat;
+            overflow: hidden;
+            text-indent: -9999px;
+            text-align: left;
+          }
+        }
+
+        .item{
+          a{
+            text-decoration: none;
+          }
+          p, span{
+            font-weight: 500;
+            font-size: 20px;
+            color: rgba($w, .55);
+          }
+
+          h4{
+            font-size: 25px;
+            line-height: 26px;
+            color: $w;
+            font-weight: 900;
+            @include prefix(transition, all 0.5s ease);
+          }
+          &:hover{
+            p{
+              color: #376ecb;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+main.al-all-content{
+  section.for-students-and-calendar{
+    .hot-news{
+      min-height: 63px;
+      background-color: #c54444;
+      margin-bottom: 35px;
+      .urgent{
+        position: relative;
+        width: 340px;
+        float: left;
+        background-color: #ff5252;
+        padding: 16px 0;
+        z-index: 100;
+        text-align: right;
+        @include box-shadow(2px 0 5px rgba(0,0,0,.76));
+        a{
+          text-decoration: none;
+          color: $w;
+          font-size: 22px;
+          font-weight: 500;
+          margin-right: 20px;
+        }
+      }
+      .main-hot-news{
+        width: calc(100% - 340px);
+        float: left;
+        padding-top: 16px;
+        position: relative;
+        .wrapper{
+          width: 100%;
+          position: absolute;
+          overflow: hidden;
+          ul{
+            //width: 3070px;
+            list-style: none;
+            &:after{
+              content: "";
+              clear: both;
+              display: block;
+            }
+            li{
+              position: relative;
+              float: left;
+              margin-right: 40px;
+              &:last-child{
+                margin-right: 0;
+              }
+
+              span.al-seperator{
+                position: absolute;
+                top: 8px;
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                @include prefix(border-radius,50%);
+                background-color: #ff5252;
+              }
+              a.al-main-link{
+                padding-left: 50px;
+                display: block;
+                max-width: 1000px;
+                text-decoration: none;
+                color: $w;
+                font-size: 22px;
+                font-weight: 500;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+              }
+              .fast-box{
+                position: absolute;
+                top: 30px;
+                left: 0;
+                width: 300px;
+                z-index: 99999;
+                background-color: #448aff;
+                padding: 15px;
+                display: none;
+                @include box-shadow(0px 1px 5px rgba(0, 0, 0, 0.76));
+                span{
+                  color: $w;
+                  margin-right: 10px;
+                }
+                p{
+                  padding: 10px 0;
+                }
+                a{
+                  color: $w;
+                  &:first-of-type{
+                    font-size: 20px;
+                  }
+                  &:last-of-type{
+                    text-decoration: underline;
+                    font-style: italic;
+                    position: absolute;
+                    bottom: 5px;
+                    right: 10px;
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .gallery-menu{
+      padding: 0;
+      list-style: none;
+      &:after{
+        content: "";
+        clear: both;
+        display: block;
+      }
+
+
+      li{
+        position: relative;
+        float: left;
+        padding: 18px 30px;
+        margin-right: 10px;
+        a{
+          display: block;
+          font-weight: 400;
+          font-size: 22px;
+          text-decoration: none;
+          color: rgba($b, 0.7);
+          transition: all 0.5s ease;
+          &:hover{
+            color: $b;
+          }
+        }
+      }
+    }
+    .gallery-owl{
+      padding-top: 35px;
+      clear: both;
+      margin-bottom: 63px;
+      #al-main-gallery-carousel{
+        figure{
+          width: 100%;
+          cursor: pointer;
+          padding:0 50px;
+          position: relative;
+          height: 280px;
+          @include border-radius(8px);
+          @include background-clip(padding-box);
+          &:before{
+            content: "";
+            transition: all 0.8s ease;
+            @include border-radius(8px);
+            @include background-clip(padding-box);
+          }
+          &:hover{
+            &:before{
+              content: "";
+              position: absolute;
+              width: 100%;
+              height: 100%;
+              top: 0;
+              left: 0;
+              background-color: $b;
+              opacity: 0.7;
+              z-index: 10;
+              @include border-radius(8px);
+              @include background-clip(padding-box);
+            }
+            .al-wrapper-gallery-info{
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+          img{
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index:0;
+            @include border-radius(8px);
+            @include background-clip(padding-box);
+          }
+          .al-wrapper-gallery-info{
+            position: relative;
+            z-index: 100;
+            visibility: hidden;
+            opacity: 0;
+            transition: all 0.8s ease;
+            top: 50%;
+            transform: translateY(-50%);
+            figcaption{
+              font-size: 28px;
+              font-weight: 500;
+              color: $w;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+            }
+            p{
+              font-size: 20px;
+              font-weight: 400;
+              color: $w;
+            }
+            a{
+              font-size: 19px;
+              line-height: 24px;
+              color: $w;
+              z-index: 100;
+              font-weight: 400;
+            }
+          }
+        }
+        .owl-nav{
+          display: block!important;
+          position: absolute;
+          left: 0;
+          width: 100%;
+          height: 0;
+          top: 117px;
+          .owl-prev{
+            position: absolute;
+            left: 5%;
+          }
+          .owl-next{
+            position: absolute;
+            right: 5%;
+          }
+        }
+      }
+
+    }
+    .al-for-beginners-news{
+      h2{
+        font-size: 30px;
+        font-weight: 400;
+        margin-bottom: 15px;
+        color: $b;
+      }
+      .al-wrapper{
+        padding-right: 80px;
+        article{
+          border-top: 1px solid rgba(#000, 0.15);
+          padding-bottom: 35px;
+          &:after{
+            content: "";
+            display: block;
+            clear: both;
+          }
+          .al-img-wrapper{
+            float: left;
+            width: 145px;
+            height: 145px;
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          .al-main-content{
+            float: left;
+            width: calc(100% - 145px);
+            padding-left: 20px;
+            h3{
+              margin: 10px 0 0;
+              a{
+                font-size: 22px;
+                line-height: 26px;
+                color: $b;
+                font-weight: 400;
+                text-decoration: none;
+              }
+            }
+            p{
+              margin-top: 10px;
+              font-size: 20px;
+              font-weight: 300;
+              line-height: 26px;
+              color: $b;
+            }
+          }
+        }
+      }
+    }
+    .religious-holiday{
+      @extend .al-for-beginners-news;
+      #smallbar{
+        border-bottom: 0;
+        margin: 0;
+        .lavalamp-object{
+          bottom: -1px!important;
+        }
+        li{
+          padding: 7px 0;
+          width: 50%;
+          margin: 0;
+          &.active{
+            a{
+              border: none;
+              &:hover{
+                background: none;
+              }
+              &:focus{
+                border: none;
+                outline: none;
+                background: none;
+              }
+              &:active{
+                border: none;
+                outline: none;
+                background: none;
+              }
+            }
+          }
+          a{
+            text-align: center;
+            font-size: 24px;
+            border: none;
+            &:hover{
+              background: none;
+            }
+            &:focus{
+              border: none;
+              outline: none;
+              background: none;
+            }
+            &:active{
+              border: none;
+              outline: none;
+              background: none;
+            }
+          }
+        }
+      }
+    }
+    .news{
+      h2{
+        margin-bottom: 80px;
+      }
+      .al-news-section-1{
+        @extend .al-for-beginners-news;
+        .al-wrapper{
+          #threenavs{
+            border-bottom: none;
+            margin: 0;
+            .lavalamp-object{
+              bottom: -1px!important;
+            }
+            li{
+              width: 33.3%;
+              margin: 0;
+              padding: 8px 0;
+            }
+          }
+        }
+      }
+      .al-news-section-2{
+        .al-wrapper{
+          padding-right: 80px;
+          .al-img-wrapper{
+            height: 280px;
+            margin-bottom: 30px;
+            img{
+              width: 100%;
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+          figcaption{
+            margin-bottom: 15px;
+            a{
+              font-size: 28px;
+              font-weight: 500;
+              color: $b;
+              &:hover{
+                text-decoration: none;
+              }
+            }
+          }
+          p{
+            font-size: 20px;
+            font-weight: 300;
+            color: $b;
+            line-height: 26px;
+          }
+        }
+      }
+      .al-news-section-3{
+        @extend .religious-holiday;
+        .al-wrapper{
+          padding-right: 0;
+        }
+        #smallbar2{
+          @extend #smallbar;
+        }
+      }
+    }
+  }
+  section.multimedia{
+    #al-main-multimedia-carousel{
+      margin-top: 77px;
+      .show-inner{
+        figure{
+          figcaption{
+            -webkit-animation-duration: 0.5s;
+            animation-duration: 0.5s;
+            -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+            -webkit-animation-name: zoomIn;
+            animation-name: zoomIn;
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+      figure{
+        float: left;
+        .al-img-wrapper{
+          height: 280px;
+          position: relative;
+          span.al-info-video{
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-color: rgba($b, 0.6);
+            display: inline-block;
+            padding: 7px 15px;
+            font-size: 22px;
+            font-weight: 400;
+            color: $w;
+            @include prefix(border-bottom-left-radius,8px);
+            i{
+              position: relative;
+              top: 5px;
+              margin-right: 12px;
+            }
+          }
+          span.al-info-photo{
+            @extend .al-info-video;
+            i{
+              margin: 0;
+            }
+          }
+          img{
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+        figcaption{
+          opacity: 0;
+          visibility: hidden;
+          padding: 27px 50px 57px;
+          transition: all 0.5s ease;
+          h2{
+            margin: 0;
+            a{
+              font-weight: 400;
+              font-size: 28px;
+              color: $b;
+              &:hover{
+                text-decoration: none;
+              }
+            }
+          }
+          p{
+            margin-top: 15px;
+            font-weight: 300;
+            font-size: 20px;
+            color: $b;
+            line-height: 24px;
+          }
+        }
+      }
+      .owl-nav{
+        position: absolute;
+        left: 0;
+        width: 100%;
+        height: 0;
+        top: 117px;
+        .owl-prev{
+          position: absolute;
+          left: 5%;
+        }
+        .owl-next{
+          position: absolute;
+          right: 5%;
+        }
+      }
+    }
+    .important-news{
+      padding-bottom: 63px;
+      .main-content{
+        display: table;
+        position: relative;
+        height: 400px;
+        text-align: center;
+        &:before{
+          content: "";
+          transition: all 0.8s ease;
+          @include border-radius(8px);
+          @include background-clip(padding-box);
+        }
+
+        &:hover{
+          &:before{
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-color: $b;
+            opacity: 0.5;
+            z-index: 10;
+            @include border-radius(8px);
+            @include background-clip(padding-box);
+          }
+          .al-important-news-wrapper{
+            visibility: visible;
+            opacity: 1;
+          }
+        }
+
+        img{
+          z-index: 0;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+
+        div.al-important-news-wrapper{
+          position: relative;
+          z-index: 100;
+          display: table-cell;
+          width: 100%;
+          vertical-align: middle;
+          padding: 0 215px;
+          visibility: hidden;
+          opacity: 0;
+          transition: all 0.8s ease;
+          h2{
+            a{
+              position: relative;
+              font-size: 36px;
+              font-weight: 500;
+              color: $w;
+            }
+          }
+          p{
+            font-size: 22px;
+            font-weight: 400;
+            color: $w;
+            line-height: 26px;
+            cursor: default;
+          }
+          a.al-more{
+            color: $w;
+            border-bottom: 1px solid $w;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,101 @@
+//aside content global@@@@@@@@@@@@@@@@@@@@@@@
+aside.al-main-aside{
+  margin-top: 20px;
+  padding-bottom: 115px;
+  .al-title{
+    margin-bottom: 45px;
+    span{
+      font-weight: 300;
+      font-size: 36px;
+      line-height: 36px;
+      color: $b;
+      padding: 0 27px 0 0;
+    }
+  }
+  .al-subscribe{
+    font-size: 20px;
+    font-weight: 300;
+    color: $b;
+  }
+  form{
+    padding-bottom: 53px;
+    input[type="email"]{
+      font-size: 20px;
+      color: $b;
+      font-weight: 300;
+      @include border-radius(7px);
+      @include background-clip(padding-box);
+      @include placeholder-color(rgba($b,0.6));
+      border: 1px solid rgba($b, 0.3);
+      outline: none;
+      padding: 15px 22px;
+      max-width: 65.2%;
+      width: 100%;
+
+    }
+    input[type="submit"]{
+      font-size: 20px;
+      color: $w;
+      width: calc(100% - 67.2%);
+      background-color: #1c88d4;
+      font-weight: 400;
+      @include border-radius(7px);
+      @include background-clip(padding-box);
+      border: none;
+      outline: none;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+      float: right;
+      padding: 15px 5px;
+      transition: all 0.5s ease;
+      &:hover{
+        background-color: lighten(#1c88d4, 20%);
+      }
+    }
+  }
+  .al-news-calendar{
+    padding-bottom: 65px;
+  }
+  article{
+    padding: 50px 0;
+    &:first-of-type{
+      border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+      padding-top: 0;
+    }
+    figure{
+      max-width: 405px;
+      width: 100%;
+      height: 238px;
+      margin-bottom: 35px;
+      img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+    p{
+      font-size: 24px;
+      color: $b;
+      font-weight: 300;
+      line-height: 36px;
+    }
+    span.al-pub-info{
+      a{
+        position: relative;
+        top: 1px;
+        margin-left: 20px;
+      }
+    }
+  }
+  .img-wrapper{
+    height: 300px;
+    margin-bottom: 50px;
+
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
