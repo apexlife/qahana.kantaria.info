@@ -55,11 +55,8 @@
                     )
                 );
                 ?>
-                <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pull-right al-news-search-box">
-                    <form>
-                        <input type="search" placeholder="Поиск">
-                        <i class="al-search-black"></i>
-                    </form>
+                <div class="col-md-3 pull-right al-news-search-box">
+                    <?php get_search_form(); ?>
                     <a href="" class="al-fc-news-black"></a>
                 </div>
             </div>
