@@ -5,6 +5,10 @@
     remove_action('wp_head', 'wlwmanifest_link');
 ?>
 <?php
+
+/*
+ * Scripts
+ */
 function qahana_scripts() {
     //CSS
     wp_enqueue_style('styel.css', get_stylesheet_uri());
@@ -21,7 +25,7 @@ function qahana_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'qahana_scripts' );
 
-/**
+/*
  * Navigation
  */
 function qahana_theme_setup() {
