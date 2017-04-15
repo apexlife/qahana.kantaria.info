@@ -14,7 +14,23 @@ nav.navbar-default{
       li{
         a{
           padding: 10px 25px;
-
+          font-weight: 400;
+          color: #555;
+          font-size: 21px;
+          transition: all 0.5s ease;
+          background: transparent!important;
+          &:hover{
+            color: #448aff;
+            background-color: transparent!important;
+          }
+          &:active{
+            background-color: transparent!important;
+            color: $w;
+          }
+          &:focus{
+            background-color: transparent!important;
+            color: $w;
+          }
           &.dropdown-toggle{
             &:hover{
               background-color: transparent;
@@ -54,24 +70,8 @@ nav.navbar-default{
             }
           }
         }
-      }
-      .al-menu-parts{
-        font-weight: 400;
-        color: $w;
-        font-size: 21px;
-        transition: all 0.5s ease;
-        background: transparent!important;
-        &:hover{
-          color: #448aff;
-          background-color: transparent!important;
-        }
-        &:active{
-          background-color: transparent!important;
-          color: $w;
-        }
-        &:focus{
-          background-color: transparent!important;
-          color: $w;
+        ul li a {
+          color: #000;
         }
       }
     }
@@ -81,3 +81,4 @@ nav.navbar-default{
     vertical-align: middle;
   }
 }
+

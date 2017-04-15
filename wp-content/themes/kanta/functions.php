@@ -1,7 +1,6 @@
 <?php
 
-function qahana_scripts()
-{
+function qahana_scripts() {
     //CSS
     wp_enqueue_style('styel.css', get_stylesheet_uri());
     //JavaScript
@@ -17,4 +16,20 @@ function qahana_scripts()
 }
 add_action( 'wp_enqueue_scripts', 'qahana_scripts' );
 
+/**
+ * Navigation
+ */
+function qahana_theme_setup() {
 
+    add_theme_support('menus');
+
+    register_nav_menu('home', 'Home Page Navigation');
+    register_nav_menu('global', 'Global Page Navigation');
+    register_nav_menu('footer', 'Footer Navigation');
+}
+add_action('init', 'qahana_theme_setup');
+
+/*
+ * Include Walker File
+ */
+require get_template_directory() . '/inc/walker.php';

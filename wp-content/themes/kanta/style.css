@@ -9673,30 +9673,50 @@ nav.navbar-default .navbar-collapse .navbar-nav {
 /* line 15, assets/sass/_nav-homepage.scss */
 nav.navbar-default .navbar-collapse .navbar-nav li a {
   padding: 10px 25px;
+  font-weight: 400;
+  color: #555;
+  font-size: 21px;
+  transition: all 0.5s ease;
+  background: transparent !important;
 }
-/* line 19, assets/sass/_nav-homepage.scss */
+/* line 22, assets/sass/_nav-homepage.scss */
+nav.navbar-default .navbar-collapse .navbar-nav li a:hover {
+  color: #448aff;
+  background-color: transparent !important;
+}
+/* line 26, assets/sass/_nav-homepage.scss */
+nav.navbar-default .navbar-collapse .navbar-nav li a:active {
+  background-color: transparent !important;
+  color: #ffffff;
+}
+/* line 30, assets/sass/_nav-homepage.scss */
+nav.navbar-default .navbar-collapse .navbar-nav li a:focus {
+  background-color: transparent !important;
+  color: #ffffff;
+}
+/* line 35, assets/sass/_nav-homepage.scss */
 nav.navbar-default .navbar-collapse .navbar-nav li a.dropdown-toggle:hover {
   background-color: transparent;
   color: #448aff;
 }
-/* line 22, assets/sass/_nav-homepage.scss */
+/* line 38, assets/sass/_nav-homepage.scss */
 nav.navbar-default .navbar-collapse .navbar-nav li a.dropdown-toggle:hover i {
   background-position: -43px -250px;
 }
-/* line 26, assets/sass/_nav-homepage.scss */
+/* line 42, assets/sass/_nav-homepage.scss */
 nav.navbar-default .navbar-collapse .navbar-nav li a.dropdown-toggle:focus {
   background-color: transparent;
   color: #448aff;
 }
-/* line 29, assets/sass/_nav-homepage.scss */
+/* line 45, assets/sass/_nav-homepage.scss */
 nav.navbar-default .navbar-collapse .navbar-nav li a.dropdown-toggle:focus i {
   background-position: -43px -250px;
 }
-/* line 35, assets/sass/_nav-homepage.scss */
+/* line 51, assets/sass/_nav-homepage.scss */
 nav.navbar-default .navbar-collapse .navbar-nav li .dropdown-menu {
   padding: 30px 0 52px;
 }
-/* line 38, assets/sass/_nav-homepage.scss */
+/* line 54, assets/sass/_nav-homepage.scss */
 nav.navbar-default .navbar-collapse .navbar-nav li .dropdown-menu li strong {
   display: inline-block;
   margin-bottom: 8px;
@@ -9705,39 +9725,20 @@ nav.navbar-default .navbar-collapse .navbar-nav li .dropdown-menu li strong {
   font-size: 22px;
   font-weight: 400;
 }
-/* line 46, assets/sass/_nav-homepage.scss */
+/* line 62, assets/sass/_nav-homepage.scss */
 nav.navbar-default .navbar-collapse .navbar-nav li .dropdown-menu li a {
   font-size: 20px;
   padding: 3px 15px;
   font-weight: 300;
 }
-/* line 50, assets/sass/_nav-homepage.scss */
+/* line 66, assets/sass/_nav-homepage.scss */
 nav.navbar-default .navbar-collapse .navbar-nav li .dropdown-menu li a:hover {
   background-color: transparent;
   color: #2e5f97;
 }
-/* line 58, assets/sass/_nav-homepage.scss */
-nav.navbar-default .navbar-collapse .navbar-nav .al-menu-parts {
-  font-weight: 400;
-  color: #ffffff;
-  font-size: 21px;
-  transition: all 0.5s ease;
-  background: transparent !important;
-}
-/* line 64, assets/sass/_nav-homepage.scss */
-nav.navbar-default .navbar-collapse .navbar-nav .al-menu-parts:hover {
-  color: #448aff;
-  background-color: transparent !important;
-}
-/* line 68, assets/sass/_nav-homepage.scss */
-nav.navbar-default .navbar-collapse .navbar-nav .al-menu-parts:active {
-  background-color: transparent !important;
-  color: #ffffff;
-}
-/* line 72, assets/sass/_nav-homepage.scss */
-nav.navbar-default .navbar-collapse .navbar-nav .al-menu-parts:focus {
-  background-color: transparent !important;
-  color: #ffffff;
+/* line 73, assets/sass/_nav-homepage.scss */
+nav.navbar-default .navbar-collapse .navbar-nav li ul li a {
+  color: #000;
 }
 /* line 79, assets/sass/_nav-homepage.scss */
 nav.navbar-default .al-drop-menu-arrow {
@@ -11162,23 +11163,23 @@ main.al-main-leaders-page figure figcaption span {
   animation-name: zoomIn;
 }
 
-/* line 49, assets/sass/style.scss */
+/* line 50, assets/sass/style.scss */
 article img {
   max-width: 100%;
 }
 
-/* line 56, assets/sass/style.scss */
+/* line 57, assets/sass/style.scss */
 a:hover {
   text-decoration: none;
 }
-/* line 59, assets/sass/style.scss */
+/* line 60, assets/sass/style.scss */
 a:focus {
   outline: none;
   color: #000;
   text-decoration: none;
 }
 
-/* line 66, assets/sass/style.scss */
+/* line 67, assets/sass/style.scss */
 h2.al-head-title {
   font-weight: 500;
   font-size: 48px;
@@ -11186,40 +11187,40 @@ h2.al-head-title {
   margin-top: 50px;
 }
 
-/* line 73, assets/sass/style.scss */
+/* line 74, assets/sass/style.scss */
 #al-breadcrumbs-glob {
   background-color: transparent;
   padding: 8px 0px;
 }
-/* line 76, assets/sass/style.scss */
+/* line 77, assets/sass/style.scss */
 #al-breadcrumbs-glob li {
   font-size: 21px;
   font-weight: 400;
   color: #000000;
 }
-/* line 80, assets/sass/style.scss */
+/* line 81, assets/sass/style.scss */
 #al-breadcrumbs-glob li a {
   color: #838282;
   font-weight: 300;
 }
 
-/* line 87, assets/sass/style.scss */
+/* line 88, assets/sass/style.scss */
 .al-global-style-tabs {
   margin: 0;
   display: inline-block;
 }
-/* line 90, assets/sass/style.scss */
+/* line 91, assets/sass/style.scss */
 .al-global-style-tabs:after {
   content: "";
   clear: both;
   display: block;
 }
-/* line 95, assets/sass/style.scss */
+/* line 96, assets/sass/style.scss */
 .al-global-style-tabs li {
   margin: 0;
   padding: 3px 0px;
 }
-/* line 98, assets/sass/style.scss */
+/* line 99, assets/sass/style.scss */
 .al-global-style-tabs li a {
   display: inline-block;
   font-weight: 400;
@@ -11229,12 +11230,12 @@ h2.al-head-title {
   transition: all 0.5s ease;
   padding: 16px 50px;
 }
-/* line 106, assets/sass/style.scss */
+/* line 107, assets/sass/style.scss */
 .al-global-style-tabs li a:hover {
   color: #000000;
 }
 
-/* line 114, assets/sass/style.scss */
+/* line 115, assets/sass/style.scss */
 .lavalamp-object {
   background-color: #448aff;
   height: 3px !important;
@@ -11243,7 +11244,7 @@ h2.al-head-title {
   left: 0 !important;
 }
 
-/* line 123, assets/sass/style.scss */
+/* line 124, assets/sass/style.scss */
 .al-date-and-views {
   font-size: 18px;
   font-weight: 400;
@@ -11251,21 +11252,21 @@ h2.al-head-title {
   cursor: default;
   display: block;
 }
-/* line 129, assets/sass/style.scss */
+/* line 130, assets/sass/style.scss */
 .al-date-and-views i {
   margin-right: 7px;
 }
-/* line 132, assets/sass/style.scss */
+/* line 133, assets/sass/style.scss */
 .al-date-and-views span {
   margin-right: 22px;
 }
 
-/* line 138, assets/sass/style.scss */
+/* line 139, assets/sass/style.scss */
 .al-title {
   border-bottom: 1px solid rgba(0, 0, 0, 0.15);
   line-height: 20px;
 }
-/* line 141, assets/sass/style.scss */
+/* line 142, assets/sass/style.scss */
 .al-title span {
   background-color: #ffffff;
   font-size: 48px;
@@ -11274,7 +11275,7 @@ h2.al-head-title {
   padding: 0 27px 0 15px;
 }
 
-/* line 152, assets/sass/style.scss */
+/* line 153, assets/sass/style.scss */
 .al-pub-info {
   margin-top: 16px;
   display: block;
@@ -11284,14 +11285,14 @@ h2.al-head-title {
   color: rgba(0, 0, 0, 0.7);
   cursor: default;
 }
-/* line 160, assets/sass/style.scss */
+/* line 161, assets/sass/style.scss */
 .al-pub-info i {
   position: relative;
   margin-right: 8px;
   top: 2px;
 }
 
-/* line 169, assets/sass/style.scss */
+/* line 170, assets/sass/style.scss */
 .al-more {
   margin-top: 10px;
   font-size: 20px;
@@ -11301,18 +11302,18 @@ h2.al-head-title {
   border-bottom: 1px solid #000;
   transition: all 0.5s ease;
 }
-/* line 177, assets/sass/style.scss */
+/* line 178, assets/sass/style.scss */
 .al-more:hover {
   text-decoration: none;
   color: #2e5f97;
 }
 
-/* line 185, assets/sass/style.scss */
+/* line 186, assets/sass/style.scss */
 .see-more {
   border: 1px solid rgba(0, 0, 0, 0.3);
   margin-bottom: 92px;
 }
-/* line 188, assets/sass/style.scss */
+/* line 189, assets/sass/style.scss */
 .see-more a {
   display: block;
   text-align: center;
@@ -11322,13 +11323,13 @@ h2.al-head-title {
   line-height: 51px;
   transition: all 0.5s ease;
 }
-/* line 196, assets/sass/style.scss */
+/* line 197, assets/sass/style.scss */
 .see-more a:hover {
   background-color: #000;
   color: #ffffff;
 }
 
-/* line 202, assets/sass/style.scss */
+/* line 203, assets/sass/style.scss */
 #true_loadmore {
   display: block;
   text-align: center;
@@ -11340,13 +11341,13 @@ h2.al-head-title {
   border: 1px solid rgba(0, 0, 0, 0.3);
   margin-bottom: 92px;
 }
-/* line 212, assets/sass/style.scss */
+/* line 213, assets/sass/style.scss */
 #true_loadmore:hover {
   background-color: #000;
   color: #ffffff;
 }
 
-/* line 220, assets/sass/style.scss */
+/* line 221, assets/sass/style.scss */
 .al-radius {
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
@@ -11357,54 +11358,54 @@ h2.al-head-title {
   background-clip: padding-box;
 }
 
-/* line 228, assets/sass/style.scss */
+/* line 229, assets/sass/style.scss */
 .nav.nav-tabs li.active a {
   border: none;
 }
-/* line 230, assets/sass/style.scss */
+/* line 231, assets/sass/style.scss */
 .nav.nav-tabs li.active a:hover {
   background: none;
 }
-/* line 233, assets/sass/style.scss */
+/* line 234, assets/sass/style.scss */
 .nav.nav-tabs li.active a:focus {
   border: none;
   outline: none;
   background: none;
 }
-/* line 238, assets/sass/style.scss */
+/* line 239, assets/sass/style.scss */
 .nav.nav-tabs li.active a:active {
   border: none;
   outline: none;
   background: none;
 }
-/* line 245, assets/sass/style.scss */
+/* line 246, assets/sass/style.scss */
 .nav.nav-tabs li a {
   text-align: center;
   font-size: 24px;
   border: none;
 }
-/* line 249, assets/sass/style.scss */
+/* line 250, assets/sass/style.scss */
 .nav.nav-tabs li a:hover {
   background: none;
 }
-/* line 252, assets/sass/style.scss */
+/* line 253, assets/sass/style.scss */
 .nav.nav-tabs li a:focus {
   border: none;
   outline: none;
   background: none;
 }
-/* line 257, assets/sass/style.scss */
+/* line 258, assets/sass/style.scss */
 .nav.nav-tabs li a:active {
   border: none;
   outline: none;
   background: none;
 }
 
-/* line 267, assets/sass/style.scss */
+/* line 268, assets/sass/style.scss */
 header.large-main-page {
   position: relative;
 }
-/* line 269, assets/sass/style.scss */
+/* line 270, assets/sass/style.scss */
 header.large-main-page .al-main-bg {
   position: absolute;
   top: 0;
@@ -11418,7 +11419,7 @@ header.large-main-page .al-main-bg {
   background-size: cover;
   background-attachment: fixed;
 }
-/* line 281, assets/sass/style.scss */
+/* line 282, assets/sass/style.scss */
 header.large-main-page .al-main-bg:before {
   content: "";
   position: absolute;
@@ -11430,24 +11431,24 @@ header.large-main-page .al-main-bg:before {
   background-position: 0 85%;
   z-index: -1;
 }
-/* line 294, assets/sass/style.scss */
+/* line 295, assets/sass/style.scss */
 header.large-main-page section.vh-full {
   position: relative;
   min-height: calc(100vh - 231px);
   height: 100%;
   overflow: hidden;
 }
-/* line 299, assets/sass/style.scss */
+/* line 300, assets/sass/style.scss */
 header.large-main-page section.vh-full .al-wrapper-v {
   height: calc(100vh - 445px);
   display: table;
 }
-/* line 302, assets/sass/style.scss */
+/* line 303, assets/sass/style.scss */
 header.large-main-page section.vh-full .al-wrapper-v .al-main-news {
   display: table-cell;
   vertical-align: middle;
 }
-/* line 305, assets/sass/style.scss */
+/* line 306, assets/sass/style.scss */
 header.large-main-page section.vh-full .al-wrapper-v .al-main-news a.al-news-btn {
   display: inline-block;
   background-color: #448aff;
@@ -11465,41 +11466,41 @@ header.large-main-page section.vh-full .al-wrapper-v .al-main-news a.al-news-btn
   -ms-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 315, assets/sass/style.scss */
+/* line 316, assets/sass/style.scss */
 header.large-main-page section.vh-full .al-wrapper-v .al-main-news a.al-news-btn:hover {
   background-color: #0053dd;
 }
-/* line 320, assets/sass/style.scss */
+/* line 321, assets/sass/style.scss */
 header.large-main-page section.vh-full .al-wrapper-v .al-main-news h1 a {
   font-family: "Exo 2", sans-serif;
   font-weight: 700;
   font-size: 72px;
   color: #ffffff;
 }
-/* line 328, assets/sass/style.scss */
+/* line 329, assets/sass/style.scss */
 header.large-main-page section.vh-full .al-wrapper-v .al-main-news p a {
   font-weight: 400;
   font-size: 24px;
   color: #ffffff;
 }
-/* line 337, assets/sass/style.scss */
+/* line 338, assets/sass/style.scss */
 header.large-main-page section.vh-full .carousel-news .al-line {
   height: 1px;
   background-color: rgba(255, 255, 255, 0.3);
   margin-bottom: 28px;
 }
-/* line 342, assets/sass/style.scss */
+/* line 343, assets/sass/style.scss */
 header.large-main-page section.vh-full .carousel-news .owl-carousel {
   clear: both;
 }
-/* line 344, assets/sass/style.scss */
+/* line 345, assets/sass/style.scss */
 header.large-main-page section.vh-full .carousel-news .owl-carousel .owl-nav {
   display: block !important;
   position: absolute;
   right: 3px;
   top: -57px;
 }
-/* line 349, assets/sass/style.scss */
+/* line 350, assets/sass/style.scss */
 header.large-main-page section.vh-full .carousel-news .owl-carousel .owl-nav .owl-prev {
   background-position: 0px -108px !important;
   background: url(assets/img/sprite.png) no-repeat;
@@ -11507,7 +11508,7 @@ header.large-main-page section.vh-full .carousel-news .owl-carousel .owl-nav .ow
   text-indent: -9999px;
   text-align: left;
 }
-/* line 356, assets/sass/style.scss */
+/* line 357, assets/sass/style.scss */
 header.large-main-page section.vh-full .carousel-news .owl-carousel .owl-nav .owl-next {
   background-position: 0px -136px !important;
   background: url(assets/img/sprite.png) no-repeat;
@@ -11515,17 +11516,17 @@ header.large-main-page section.vh-full .carousel-news .owl-carousel .owl-nav .ow
   text-indent: -9999px;
   text-align: left;
 }
-/* line 366, assets/sass/style.scss */
+/* line 367, assets/sass/style.scss */
 header.large-main-page section.vh-full .carousel-news .owl-carousel .item a {
   text-decoration: none;
 }
-/* line 369, assets/sass/style.scss */
+/* line 370, assets/sass/style.scss */
 header.large-main-page section.vh-full .carousel-news .owl-carousel .item p, header.large-main-page section.vh-full .carousel-news .owl-carousel .item span {
   font-weight: 500;
   font-size: 20px;
   color: rgba(255, 255, 255, 0.55);
 }
-/* line 375, assets/sass/style.scss */
+/* line 376, assets/sass/style.scss */
 header.large-main-page section.vh-full .carousel-news .owl-carousel .item h4 {
   font-size: 25px;
   line-height: 26px;
@@ -11536,18 +11537,18 @@ header.large-main-page section.vh-full .carousel-news .owl-carousel .item h4 {
   -ms-transition: all 0.5s ease;
   transition: all 0.5s ease;
 }
-/* line 383, assets/sass/style.scss */
+/* line 384, assets/sass/style.scss */
 header.large-main-page section.vh-full .carousel-news .owl-carousel .item:hover p {
   color: #376ecb;
 }
 
-/* line 396, assets/sass/style.scss */
+/* line 397, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news {
   min-height: 63px;
   background-color: #c54444;
   margin-bottom: 35px;
 }
-/* line 400, assets/sass/style.scss */
+/* line 401, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .urgent {
   position: relative;
   width: 340px;
@@ -11560,7 +11561,7 @@ main.al-all-content section.for-students-and-calendar .hot-news .urgent {
   -webkit-box-shadow: 2px 0 5px rgba(0, 0, 0, 0.76);
   box-shadow: 2px 0 5px rgba(0, 0, 0, 0.76);
 }
-/* line 409, assets/sass/style.scss */
+/* line 410, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .urgent a {
   text-decoration: none;
   color: #ffffff;
@@ -11568,40 +11569,40 @@ main.al-all-content section.for-students-and-calendar .hot-news .urgent a {
   font-weight: 500;
   margin-right: 20px;
 }
-/* line 417, assets/sass/style.scss */
+/* line 418, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news {
   width: calc(100% - 340px);
   float: left;
   padding-top: 16px;
   position: relative;
 }
-/* line 422, assets/sass/style.scss */
+/* line 423, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper {
   width: 100%;
   position: absolute;
   overflow: hidden;
 }
-/* line 426, assets/sass/style.scss */
+/* line 427, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul {
   list-style: none;
 }
-/* line 429, assets/sass/style.scss */
+/* line 430, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul:after {
   content: "";
   clear: both;
   display: block;
 }
-/* line 434, assets/sass/style.scss */
+/* line 435, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul li {
   position: relative;
   float: left;
   margin-right: 40px;
 }
-/* line 438, assets/sass/style.scss */
+/* line 439, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul li:last-child {
   margin-right: 0;
 }
-/* line 442, assets/sass/style.scss */
+/* line 443, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul li span.al-seperator {
   position: absolute;
   top: 8px;
@@ -11614,7 +11615,7 @@ main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .
   border-radius: 50%;
   background-color: #ff5252;
 }
-/* line 451, assets/sass/style.scss */
+/* line 452, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul li a.al-main-link {
   padding-left: 50px;
   display: block;
@@ -11627,7 +11628,7 @@ main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .
   text-overflow: ellipsis;
   white-space: nowrap;
 }
-/* line 463, assets/sass/style.scss */
+/* line 464, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul li .fast-box {
   position: absolute;
   top: 30px;
@@ -11641,24 +11642,24 @@ main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .
   -webkit-box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.76);
   box-shadow: 0px 1px 5px rgba(0, 0, 0, 0.76);
 }
-/* line 473, assets/sass/style.scss */
+/* line 474, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul li .fast-box span {
   color: #ffffff;
   margin-right: 10px;
 }
-/* line 477, assets/sass/style.scss */
+/* line 478, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul li .fast-box p {
   padding: 10px 0;
 }
-/* line 480, assets/sass/style.scss */
+/* line 481, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul li .fast-box a {
   color: #ffffff;
 }
-/* line 482, assets/sass/style.scss */
+/* line 483, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul li .fast-box a:first-of-type {
   font-size: 20px;
 }
-/* line 485, assets/sass/style.scss */
+/* line 486, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .wrapper ul li .fast-box a:last-of-type {
   text-decoration: underline;
   font-style: italic;
@@ -11667,25 +11668,25 @@ main.al-all-content section.for-students-and-calendar .hot-news .main-hot-news .
   right: 10px;
   display: block;
 }
-/* line 500, assets/sass/style.scss */
+/* line 501, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-menu {
   padding: 0;
   list-style: none;
 }
-/* line 503, assets/sass/style.scss */
+/* line 504, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-menu:after {
   content: "";
   clear: both;
   display: block;
 }
-/* line 510, assets/sass/style.scss */
+/* line 511, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-menu li {
   position: relative;
   float: left;
   padding: 18px 30px;
   margin-right: 10px;
 }
-/* line 515, assets/sass/style.scss */
+/* line 516, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-menu li a {
   display: block;
   font-weight: 400;
@@ -11694,17 +11695,17 @@ main.al-all-content section.for-students-and-calendar .gallery-menu li a {
   color: rgba(0, 0, 0, 0.7);
   transition: all 0.5s ease;
 }
-/* line 522, assets/sass/style.scss */
+/* line 523, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-menu li a:hover {
   color: #000000;
 }
-/* line 528, assets/sass/style.scss */
+/* line 529, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl {
   padding-top: 35px;
   clear: both;
   margin-bottom: 63px;
 }
-/* line 533, assets/sass/style.scss */
+/* line 534, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel figure {
   width: 100%;
   cursor: pointer;
@@ -11719,7 +11720,7 @@ main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gall
   -webkit-background-clip: padding;
   background-clip: padding-box;
 }
-/* line 541, assets/sass/style.scss */
+/* line 542, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel figure:before {
   content: "";
   transition: all 0.8s ease;
@@ -11731,7 +11732,7 @@ main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gall
   -webkit-background-clip: padding;
   background-clip: padding-box;
 }
-/* line 548, assets/sass/style.scss */
+/* line 549, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel figure:hover:before {
   content: "";
   position: absolute;
@@ -11750,12 +11751,12 @@ main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gall
   -webkit-background-clip: padding;
   background-clip: padding-box;
 }
-/* line 561, assets/sass/style.scss */
+/* line 562, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel figure:hover .al-wrapper-gallery-info {
   visibility: visible;
   opacity: 1;
 }
-/* line 566, assets/sass/style.scss */
+/* line 567, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel figure img {
   position: absolute;
   top: 0;
@@ -11772,7 +11773,7 @@ main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gall
   -webkit-background-clip: padding;
   background-clip: padding-box;
 }
-/* line 577, assets/sass/style.scss */
+/* line 578, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel figure .al-wrapper-gallery-info {
   position: relative;
   z-index: 100;
@@ -11782,7 +11783,7 @@ main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gall
   top: 50%;
   transform: translateY(-50%);
 }
-/* line 585, assets/sass/style.scss */
+/* line 586, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel figure .al-wrapper-gallery-info figcaption {
   font-size: 28px;
   font-weight: 500;
@@ -11791,13 +11792,13 @@ main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gall
   overflow: hidden;
   white-space: nowrap;
 }
-/* line 593, assets/sass/style.scss */
+/* line 594, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel figure .al-wrapper-gallery-info p {
   font-size: 20px;
   font-weight: 400;
   color: #ffffff;
 }
-/* line 598, assets/sass/style.scss */
+/* line 599, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel figure .al-wrapper-gallery-info a {
   font-size: 19px;
   line-height: 24px;
@@ -11805,7 +11806,7 @@ main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gall
   z-index: 100;
   font-weight: 400;
 }
-/* line 607, assets/sass/style.scss */
+/* line 608, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel .owl-nav {
   display: block !important;
   position: absolute;
@@ -11814,61 +11815,61 @@ main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gall
   height: 0;
   top: 117px;
 }
-/* line 614, assets/sass/style.scss */
+/* line 615, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel .owl-nav .owl-prev {
   position: absolute;
   left: 5%;
 }
-/* line 618, assets/sass/style.scss */
+/* line 619, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .gallery-owl #al-main-gallery-carousel .owl-nav .owl-next {
   position: absolute;
   right: 5%;
 }
-/* line 627, assets/sass/style.scss */
+/* line 628, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .al-for-beginners-news h2, main.al-all-content section.for-students-and-calendar .religious-holiday h2, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 h2, main.al-all-content section.for-students-and-calendar .news .al-news-section-1 h2 {
   font-size: 30px;
   font-weight: 400;
   margin-bottom: 15px;
   color: #000000;
 }
-/* line 633, assets/sass/style.scss */
+/* line 634, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .al-for-beginners-news .al-wrapper, main.al-all-content section.for-students-and-calendar .religious-holiday .al-wrapper, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 .al-wrapper, main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper {
   padding-right: 80px;
 }
-/* line 635, assets/sass/style.scss */
+/* line 636, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .al-for-beginners-news .al-wrapper article, main.al-all-content section.for-students-and-calendar .religious-holiday .al-wrapper article, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 .al-wrapper article, main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper article {
   border-top: 1px solid rgba(0, 0, 0, 0.15);
   padding-bottom: 35px;
 }
-/* line 638, assets/sass/style.scss */
+/* line 639, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .al-for-beginners-news .al-wrapper article:after, main.al-all-content section.for-students-and-calendar .religious-holiday .al-wrapper article:after, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 .al-wrapper article:after, main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper article:after {
   content: "";
   display: block;
   clear: both;
 }
-/* line 643, assets/sass/style.scss */
+/* line 644, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .al-for-beginners-news .al-wrapper article .al-img-wrapper, main.al-all-content section.for-students-and-calendar .religious-holiday .al-wrapper article .al-img-wrapper, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 .al-wrapper article .al-img-wrapper, main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper article .al-img-wrapper {
   float: left;
   width: 145px;
   height: 145px;
 }
-/* line 647, assets/sass/style.scss */
+/* line 648, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .al-for-beginners-news .al-wrapper article .al-img-wrapper img, main.al-all-content section.for-students-and-calendar .religious-holiday .al-wrapper article .al-img-wrapper img, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 .al-wrapper article .al-img-wrapper img, main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper article .al-img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-/* line 653, assets/sass/style.scss */
+/* line 654, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .al-for-beginners-news .al-wrapper article .al-main-content, main.al-all-content section.for-students-and-calendar .religious-holiday .al-wrapper article .al-main-content, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 .al-wrapper article .al-main-content, main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper article .al-main-content {
   float: left;
   width: calc(100% - 145px);
   padding-left: 20px;
 }
-/* line 657, assets/sass/style.scss */
+/* line 658, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .al-for-beginners-news .al-wrapper article .al-main-content h3, main.al-all-content section.for-students-and-calendar .religious-holiday .al-wrapper article .al-main-content h3, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 .al-wrapper article .al-main-content h3, main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper article .al-main-content h3 {
   margin: 10px 0 0;
 }
-/* line 659, assets/sass/style.scss */
+/* line 660, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .al-for-beginners-news .al-wrapper article .al-main-content h3 a, main.al-all-content section.for-students-and-calendar .religious-holiday .al-wrapper article .al-main-content h3 a, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 .al-wrapper article .al-main-content h3 a, main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper article .al-main-content h3 a {
   font-size: 22px;
   line-height: 26px;
@@ -11876,7 +11877,7 @@ main.al-all-content section.for-students-and-calendar .al-for-beginners-news .al
   font-weight: 400;
   text-decoration: none;
 }
-/* line 667, assets/sass/style.scss */
+/* line 668, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .al-for-beginners-news .al-wrapper article .al-main-content p, main.al-all-content section.for-students-and-calendar .religious-holiday .al-wrapper article .al-main-content p, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 .al-wrapper article .al-main-content p, main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper article .al-main-content p {
   margin-top: 10px;
   font-size: 20px;
@@ -11884,127 +11885,127 @@ main.al-all-content section.for-students-and-calendar .al-for-beginners-news .al
   line-height: 26px;
   color: #000000;
 }
-/* line 680, assets/sass/style.scss */
+/* line 681, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .religious-holiday #smallbar, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar2 {
   border-bottom: 0;
   margin: 0;
 }
-/* line 683, assets/sass/style.scss */
+/* line 684, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .religious-holiday #smallbar .lavalamp-object, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar .lavalamp-object, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar2 .lavalamp-object {
   bottom: -1px !important;
 }
-/* line 686, assets/sass/style.scss */
+/* line 687, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .religious-holiday #smallbar li, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar li, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar2 li {
   padding: 7px 0;
   width: 50%;
   margin: 0;
 }
-/* line 691, assets/sass/style.scss */
+/* line 692, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .religious-holiday #smallbar li.active a, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar li.active a, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar2 li.active a {
   border: none;
 }
-/* line 693, assets/sass/style.scss */
+/* line 694, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .religious-holiday #smallbar li.active a:hover, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar li.active a:hover, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar2 li.active a:hover {
   background: none;
 }
-/* line 696, assets/sass/style.scss */
+/* line 697, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .religious-holiday #smallbar li.active a:focus, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar li.active a:focus, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar2 li.active a:focus {
   border: none;
   outline: none;
   background: none;
 }
-/* line 701, assets/sass/style.scss */
+/* line 702, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .religious-holiday #smallbar li.active a:active, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar li.active a:active, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar2 li.active a:active {
   border: none;
   outline: none;
   background: none;
 }
-/* line 708, assets/sass/style.scss */
+/* line 709, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .religious-holiday #smallbar li a, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar li a, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar2 li a {
   text-align: center;
   font-size: 24px;
   border: none;
 }
-/* line 712, assets/sass/style.scss */
+/* line 713, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .religious-holiday #smallbar li a:hover, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar li a:hover, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar2 li a:hover {
   background: none;
 }
-/* line 715, assets/sass/style.scss */
+/* line 716, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .religious-holiday #smallbar li a:focus, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar li a:focus, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar2 li a:focus {
   border: none;
   outline: none;
   background: none;
 }
-/* line 720, assets/sass/style.scss */
+/* line 721, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .religious-holiday #smallbar li a:active, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar li a:active, main.al-all-content section.for-students-and-calendar .news .al-news-section-3 #smallbar2 li a:active {
   border: none;
   outline: none;
   background: none;
 }
-/* line 730, assets/sass/style.scss */
+/* line 731, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news h2 {
   margin-bottom: 80px;
 }
-/* line 736, assets/sass/style.scss */
+/* line 737, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper #threenavs {
   border-bottom: none;
   margin: 0;
 }
-/* line 739, assets/sass/style.scss */
+/* line 740, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper #threenavs .lavalamp-object {
   bottom: -1px !important;
 }
-/* line 742, assets/sass/style.scss */
+/* line 743, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news .al-news-section-1 .al-wrapper #threenavs li {
   width: 33.3%;
   margin: 0;
   padding: 8px 0;
 }
-/* line 751, assets/sass/style.scss */
+/* line 752, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news .al-news-section-2 .al-wrapper {
   padding-right: 80px;
 }
-/* line 753, assets/sass/style.scss */
+/* line 754, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news .al-news-section-2 .al-wrapper .al-img-wrapper {
   height: 280px;
   margin-bottom: 30px;
 }
-/* line 756, assets/sass/style.scss */
+/* line 757, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news .al-news-section-2 .al-wrapper .al-img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-/* line 762, assets/sass/style.scss */
+/* line 763, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news .al-news-section-2 .al-wrapper figcaption {
   margin-bottom: 15px;
 }
-/* line 764, assets/sass/style.scss */
+/* line 765, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news .al-news-section-2 .al-wrapper figcaption a {
   font-size: 28px;
   font-weight: 500;
   color: #000000;
 }
-/* line 768, assets/sass/style.scss */
+/* line 769, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news .al-news-section-2 .al-wrapper figcaption a:hover {
   text-decoration: none;
 }
-/* line 773, assets/sass/style.scss */
+/* line 774, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news .al-news-section-2 .al-wrapper p {
   font-size: 20px;
   font-weight: 300;
   color: #000000;
   line-height: 26px;
 }
-/* line 783, assets/sass/style.scss */
+/* line 784, assets/sass/style.scss */
 main.al-all-content section.for-students-and-calendar .news .al-news-section-3 .al-wrapper {
   padding-right: 0;
 }
-/* line 793, assets/sass/style.scss */
+/* line 794, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel {
   margin-top: 77px;
 }
-/* line 797, assets/sass/style.scss */
+/* line 798, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel .show-inner figure figcaption {
   -webkit-animation-duration: 0.5s;
   animation-duration: 0.5s;
@@ -12015,16 +12016,16 @@ main.al-all-content section.multimedia #al-main-multimedia-carousel .show-inner 
   opacity: 1;
   visibility: visible;
 }
-/* line 809, assets/sass/style.scss */
+/* line 810, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel figure {
   float: left;
 }
-/* line 811, assets/sass/style.scss */
+/* line 812, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel figure .al-img-wrapper {
   height: 280px;
   position: relative;
 }
-/* line 814, assets/sass/style.scss */
+/* line 815, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel figure .al-img-wrapper span.al-info-video, main.al-all-content section.multimedia #al-main-multimedia-carousel figure .al-img-wrapper span.al-info-photo {
   position: absolute;
   bottom: 0;
@@ -12040,44 +12041,44 @@ main.al-all-content section.multimedia #al-main-multimedia-carousel figure .al-i
   -ms-border-bottom-left-radius: 8px;
   border-bottom-left-radius: 8px;
 }
-/* line 825, assets/sass/style.scss */
+/* line 826, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel figure .al-img-wrapper span.al-info-video i, main.al-all-content section.multimedia #al-main-multimedia-carousel figure .al-img-wrapper span.al-info-photo i {
   position: relative;
   top: 5px;
   margin-right: 12px;
 }
-/* line 833, assets/sass/style.scss */
+/* line 834, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel figure .al-img-wrapper span.al-info-photo i {
   margin: 0;
 }
-/* line 837, assets/sass/style.scss */
+/* line 838, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel figure .al-img-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-/* line 843, assets/sass/style.scss */
+/* line 844, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel figure figcaption {
   opacity: 0;
   visibility: hidden;
   padding: 27px 50px 57px;
   transition: all 0.5s ease;
 }
-/* line 848, assets/sass/style.scss */
+/* line 849, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel figure figcaption h2 {
   margin: 0;
 }
-/* line 850, assets/sass/style.scss */
+/* line 851, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel figure figcaption h2 a {
   font-weight: 400;
   font-size: 28px;
   color: #000000;
 }
-/* line 854, assets/sass/style.scss */
+/* line 855, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel figure figcaption h2 a:hover {
   text-decoration: none;
 }
-/* line 859, assets/sass/style.scss */
+/* line 860, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel figure figcaption p {
   margin-top: 15px;
   font-weight: 300;
@@ -12085,7 +12086,7 @@ main.al-all-content section.multimedia #al-main-multimedia-carousel figure figca
   color: #000000;
   line-height: 24px;
 }
-/* line 868, assets/sass/style.scss */
+/* line 869, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel .owl-nav {
   position: absolute;
   left: 0;
@@ -12093,28 +12094,28 @@ main.al-all-content section.multimedia #al-main-multimedia-carousel .owl-nav {
   height: 0;
   top: 117px;
 }
-/* line 874, assets/sass/style.scss */
+/* line 875, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel .owl-nav .owl-prev {
   position: absolute;
   left: 5%;
 }
-/* line 878, assets/sass/style.scss */
+/* line 879, assets/sass/style.scss */
 main.al-all-content section.multimedia #al-main-multimedia-carousel .owl-nav .owl-next {
   position: absolute;
   right: 5%;
 }
-/* line 884, assets/sass/style.scss */
+/* line 885, assets/sass/style.scss */
 main.al-all-content section.multimedia .important-news {
   padding-bottom: 63px;
 }
-/* line 886, assets/sass/style.scss */
+/* line 887, assets/sass/style.scss */
 main.al-all-content section.multimedia .important-news .main-content {
   display: table;
   position: relative;
   height: 400px;
   text-align: center;
 }
-/* line 891, assets/sass/style.scss */
+/* line 892, assets/sass/style.scss */
 main.al-all-content section.multimedia .important-news .main-content:before {
   content: "";
   transition: all 0.8s ease;
@@ -12126,7 +12127,7 @@ main.al-all-content section.multimedia .important-news .main-content:before {
   -webkit-background-clip: padding;
   background-clip: padding-box;
 }
-/* line 899, assets/sass/style.scss */
+/* line 900, assets/sass/style.scss */
 main.al-all-content section.multimedia .important-news .main-content:hover:before {
   content: "";
   position: absolute;
@@ -12145,12 +12146,12 @@ main.al-all-content section.multimedia .important-news .main-content:hover:befor
   -webkit-background-clip: padding;
   background-clip: padding-box;
 }
-/* line 912, assets/sass/style.scss */
+/* line 913, assets/sass/style.scss */
 main.al-all-content section.multimedia .important-news .main-content:hover .al-important-news-wrapper {
   visibility: visible;
   opacity: 1;
 }
-/* line 918, assets/sass/style.scss */
+/* line 919, assets/sass/style.scss */
 main.al-all-content section.multimedia .important-news .main-content img {
   z-index: 0;
   position: absolute;
@@ -12160,7 +12161,7 @@ main.al-all-content section.multimedia .important-news .main-content img {
   height: 100%;
   object-fit: cover;
 }
-/* line 928, assets/sass/style.scss */
+/* line 929, assets/sass/style.scss */
 main.al-all-content section.multimedia .important-news .main-content div.al-important-news-wrapper {
   position: relative;
   z-index: 100;
@@ -12172,14 +12173,14 @@ main.al-all-content section.multimedia .important-news .main-content div.al-impo
   opacity: 0;
   transition: all 0.8s ease;
 }
-/* line 939, assets/sass/style.scss */
+/* line 940, assets/sass/style.scss */
 main.al-all-content section.multimedia .important-news .main-content div.al-important-news-wrapper h2 a {
   position: relative;
   font-size: 36px;
   font-weight: 500;
   color: #ffffff;
 }
-/* line 946, assets/sass/style.scss */
+/* line 947, assets/sass/style.scss */
 main.al-all-content section.multimedia .important-news .main-content div.al-important-news-wrapper p {
   font-size: 22px;
   font-weight: 400;
@@ -12187,7 +12188,7 @@ main.al-all-content section.multimedia .important-news .main-content div.al-impo
   line-height: 26px;
   cursor: default;
 }
-/* line 953, assets/sass/style.scss */
+/* line 954, assets/sass/style.scss */
 main.al-all-content section.multimedia .important-news .main-content div.al-important-news-wrapper a.al-more {
   color: #ffffff;
   border-bottom: 1px solid #ffffff;

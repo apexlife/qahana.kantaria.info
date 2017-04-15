@@ -18,11 +18,9 @@
                 ipsum velit. Nam nec tellus a odio</p>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 al-actions">
-            <ul>
-                <li><a href="" class="al-more">Священные сайты</a></li>
-                <li><a href="" class="al-more">Связаться</a></li>
-                <li><a href="" class="al-more">Подписаться</a></li>
-            </ul>
+            <?php
+                wp_nav_menu(array('theme_location'=>'footer'));
+            ?>
         </div>
         <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 al-social">
             <h3>Мы в соц сетях:</h3>

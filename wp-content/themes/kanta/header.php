@@ -9,7 +9,7 @@
     <link href="https://fonts.googleapis.com/css?family=Exo+2:500,700" rel="stylesheet">
     <?php wp_head(); ?>
 </head>
-<body>
+<body <?php body_class(); ?>>
 <header id="al-library-header" class="main-header">
     <div class="container-fluid black">
         <div class="col-md-7">
@@ -46,59 +46,15 @@
                 </button>
             </div>
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle al-menu-parts al-random" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Епископы<i class="dropdown-arrow dropdown-arrow-black"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><strong>Епископы</strong></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle al-menu-parts" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Новости<i class="dropdown-arrow dropdown-arrow-black"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><strong>Епископы</strong></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle al-menu-parts" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Епархиальная жизнь<i class="dropdown-arrow dropdown-arrow-black"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><strong>Епископы</strong></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle al-menu-parts" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Христианство<i class="dropdown-arrow dropdown-arrow-black"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><strong>Епископы</strong></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                        </ul>
-                    </li>
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle al-menu-parts" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Библиотека<i class="dropdown-arrow dropdown-arrow-black"></i></a>
-                        <ul class="dropdown-menu">
-                            <li><strong>Епископы</strong></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                            <li><a href="#">This is Photoshop's version</a></li>
-                        </ul>
-                    </li>
-                    <li><a href="#" class="al-menu-parts">Вопросы к священнику</a></li>
-                </ul>
+                <?php
+                wp_nav_menu(array(
+                        'theme_location' => 'home',
+                        'container' => false,
+                        'menu_class' => 'nav navbar-nav',
+                        'walker' => new Walker_Nav_Home()
+                    )
+                );
+                ?>
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 pull-right al-news-search-box">
                     <form>
                         <input type="search" placeholder="Поиск">
