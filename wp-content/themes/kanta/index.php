@@ -33,16 +33,11 @@
                     endwhile;
                     endif;
                 ?>
-                <!--<nav class="page-navigation">
-                    <ul class="pagination">
-                        <li><a href="#">&#8592; назад</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">вперед &#8594;</a></li>
-                    </ul>
-                </nav>-->
+
+                <nav class="page-navigation">
+                    <?php if (function_exists('qahana_pagination')) qahana_pagination(); ?>
+
+                </nav>
             </section>
             <aside class="col-md-4 col-md-offset-1 al-main-aside">
                 <?php get_sidebar(); ?>
