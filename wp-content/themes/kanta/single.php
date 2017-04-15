@@ -5,7 +5,7 @@
         <div class="container-fluid">
             <section class="col-md-7">
 
-                <?php //if( function_exists('bootstrap_breadcrumb') ) bootstrap_breadcrumb(); ?>
+                <?php if( function_exists('bootstrap_breadcrumb') ) bootstrap_breadcrumb(); ?>
 
                 <article>
                     <!-- Start the Loop. -->
