@@ -113,7 +113,48 @@ function footer_text_customizer( $wp_customize ) {
 }
 add_action( 'customize_register', 'footer_text_customizer' );
 
+/*
+ * Custom Post Type
+ */
+function qahana_custom_post_type (){
 
+    $labels = array(
+        'name' => 'Churches',
+        'singular_name' => 'Churches',
+        'add_new' => 'Add New Churches',
+        'all_items' => 'All Churches',
+        'add_new_item' => 'Add Churches',
+        'edit_item' => 'Edit Churches',
+        'new_item' => 'New Churches',
+        'view_item' => 'View Churches',
+        'search_item' => 'Search Churches',
+        'not_found' => 'No Churches found',
+        'not_found_in_trash' => 'No Churches found in trash',
+        'parent_item_colon' => 'Parent Churches'
+    );
+    $args = array(
+        'labels' => $labels,
+        'public' => true,
+        'has_archive' => true,
+        'publicly_queryable' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revisions',
+        ),
+        'taxonomies' => array('category', 'post_tag'),
+        'menu_position' => 5,
+        'exclude_from_search' => false
+    );
+    register_post_type('Churches',$args);
+}
+add_action('init','qahana_custom_post_type');
 
 /*
  * Sidebar function

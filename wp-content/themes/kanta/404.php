@@ -1,4 +1,4 @@
 <?php
     header("Status: 301 Moved Permanently");
-    header("Location:index.php");
+    header("Location:http://qahana.kantaria.info");
 ?>
