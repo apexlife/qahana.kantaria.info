@@ -10,6 +10,8 @@
                         <h1><?php the_title(); ?></h1>
                         <?php the_post_thumbnail( 'full' ) ?>
                         <?php the_content(); ?>
+
+                        <?php echo get_post_meta($post->ID, 'description', true); ?>
                         <!-- Post -->
                     <?php endwhile; ?>
                         <!-- Post Navigation -->
