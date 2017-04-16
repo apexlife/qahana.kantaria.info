@@ -48,6 +48,72 @@ add_theme_support('post-formats', array('aside','image','video'));
 add_theme_support('html5', array('search-form'));
 add_theme_support('custom-logo');
 
+/*
+ * Добавление страницы настройки в админ-панель WordPress
+ */
+function example_customizer_menu() {
+    add_theme_page( 'Customize', 'Customize', 'edit_theme_options' );
+}
+add_action( 'admin_menu', 'example_customizer_menu' );
+
+/*
+ * Добавление индивидуальный секций, опций и элементов управления к настройщику тем
+ */
+function footer_text_customizer( $wp_customize ) {
+    $wp_customize->add_section(
+        'footer',
+        array(
+            'title' => 'Footer',
+            'description' => 'It"s text change settings section' ,
+            'priority' => 35,
+        )
+    );
+    $wp_customize->add_setting(
+        'copyright_textbox',
+        array(
+            'default' => 'Powered By Kantaria Mikheili',
+        )
+    );
+    $wp_customize->add_control(
+        'copyright_textbox',
+        array(
+            'label' => 'Copyright text',
+            'section' => 'footer',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'about_page_title',
+        array(
+            'default' => 'Powered By Kantaria Mikheili',
+        )
+    );
+    $wp_customize->add_control(
+        'about_page_title',
+        array(
+            'label' => 'About Text Title',
+            'section' => 'footer',
+            'type' => 'text',
+        )
+    );
+    $wp_customize->add_setting(
+        'about_page_description',
+        array(
+            'default' => 'Powered By Kantaria Mikheili',
+        )
+    );
+    $wp_customize->add_control(
+        'about_page_description',
+        array(
+            'label' => 'About Text Description',
+            'section' => 'footer',
+            'type' => 'textarea',
+        )
+    );
+}
+add_action( 'customize_register', 'footer_text_customizer' );
+
+
 
 /*
  * Sidebar function
@@ -164,7 +230,6 @@ function qahana_pagination() {
 require get_template_directory() . '/inc/walker.php';
 
 /*
- *
  *
  *
  * Полезные доработки

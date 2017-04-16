@@ -14,8 +14,9 @@
                     </div>
                 </div>
             </div>
-            <div class="col-md-2">
-                <h3></h3>
+            <div class="col-md-2 col-md-offset-1 al-about">
+                <h3><?php echo get_theme_mod( 'about_page_title', 'Powered By Kantaria Mikheili' ); ?></h3>
+                <div class="textwidget"><?php echo get_theme_mod( 'about_page_description', 'Powered By Kantaria Mikheili' ); ?></div>
             </div>
             <?php //if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : endif; ?>
             <div class="col-md-2 col-md-offset-1 al-actions">
@@ -37,7 +38,7 @@
         </div>
         <div class="row al-copyright-bottom">
             <div class="col-md-9 col-md-offset-1 text-center">
-                <p><?php echo get_theme_mod( 'true_footer_copyright_text', 'Пока нет никакой информации об авторских правах.' ); ?></p>
+                <p><?php echo get_theme_mod( 'copyright_textbox', 'Powered By Kantaria Mikheili' ); ?></p>
             </div>
             <div class="col-md-2">
                 <?php
