@@ -5,9 +5,7 @@
             <div class="col-md-2 al-copyright">
                 <div class="media">
                     <div class="media-left">
-                        <a href="<?php echo get_home_url(); ?>">
-                            <img class="d-flex mr-3" src="<?php //echo(ot_get_option( 'logo' )); ?>" alt="Generic placeholder image">
-                        </a>
+                        <?php the_custom_logo( $blog_id ); ?>
                     </div>
                     <div class="media-body">
                         <p>
@@ -15,6 +13,9 @@
                         </p>
                     </div>
                 </div>
+            </div>
+            <div class="col-md-2">
+                <h3></h3>
             </div>
             <?php //if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar(2) ) : endif; ?>
             <div class="col-md-2 col-md-offset-1 al-actions">
@@ -36,7 +37,7 @@
         </div>
         <div class="row al-copyright-bottom">
             <div class="col-md-9 col-md-offset-1 text-center">
-                <p><?php //echo(ot_get_option( 'copyright' )); ?>© 2003-2017 Qahana.am Արարատյան Հայրապետական Թեմ</p>
+                <p><?php echo get_theme_mod( 'true_footer_copyright_text', 'Пока нет никакой информации об авторских правах.' ); ?></p>
             </div>
             <div class="col-md-2">
                 <?php

@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
     <main class="al-main-news-page">
         <div class="container-fluid">
             <section class="col-md-7">

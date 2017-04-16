@@ -1,14 +1,12 @@
-<?php
+<?php get_header(); ?>
 
-/*
-    Template Name: Without Sidebar
- */
-
-get_header(); ?>
 
     <main class="al-main-news-inside">
         <div class="container-fluid">
-            <section class="col-md-12">
+            <section class="col-md-7">
+
+                <?php if( function_exists('bootstrap_breadcrumb') ) bootstrap_breadcrumb(); ?>
+
                 <article>
                     <!-- Start the Loop. -->
                     <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
@@ -32,6 +30,11 @@ get_header(); ?>
                 </article>
 
             </section>
+            <aside class="col-md-4 col-md-offset-1 al-main-aside">
+                <?php get_sidebar(); ?>
+            </aside>
         </div>
     </main>
+
+
 <?php get_footer(); ?>

@@ -11,27 +11,36 @@
     <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
-<header id="al-library-header" class="main-header">
+<header id="al-news-header" class="main-header">
     <div class="container-fluid black">
-        <div class="col-md-7">
-            <a href="index.html" class="navbar-brand">
-                <div>
-                    <img src="../assets/img/logo.png" alt="image">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="media al-header-logo-content">
+                    <div class="media-left">
+                        <?php
+                            the_custom_logo( $blog_id );
+                        ?>
+                    </div>
+                    <div class="media-body">
+                        <a href="<?php echo get_home_url(); ?>">
+                            <h1><?php bloginfo('name'); ?></h1>
+                            <h2><?php echo bloginfo('description'); ?></h2>
+                        </a>
+                    </div>
                 </div>
-                <p><strong>библиотека</strong>Армянской апостольской церкви<small>арарат патриаршая епархия</small></p>
-            </a>
-        </div>
-        <div class="col-md-5">
-            <div class="today">
-                <strong>13</strong>
-                <figure>
-                    <sup>Марта</sup>
-                    <sub>Сегодня</sub>
-                </figure>
             </div>
-            <p class="header-quote">«Твердо храните Господа Бога твоего, в тебе <br>
-                заповеди, законы и правила». (Втор. 6:17).
-            </p>
+            <div class="col-md-5 col-md-offset-3">
+                <div class="today">
+                    <strong>13</strong>
+                    <figure>
+                        <sup>Марта</sup>
+                        <sub>Сегодня</sub>
+                    </figure>
+                </div>
+                <p class="header-quote">«Твердо храните Господа Бога твоего, в тебе <br>
+                    заповеди, законы и правила». (Втор. 6:17).
+                </p>
+            </div>
         </div>
     </div>
 </header>
