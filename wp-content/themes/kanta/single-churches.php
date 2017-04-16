@@ -1,11 +1,8 @@
 <?php get_header(); ?>
 
-
     <main class="al-main-news-inside">
         <div class="container-fluid">
             <section class="col-md-7">
-
-                <?php if( function_exists('bootstrap_breadcrumb') ) bootstrap_breadcrumb(); ?>
 
                 <article>
                     <!-- Start the Loop. -->
@@ -35,6 +32,7 @@
             </aside>
         </div>
     </main>
+
 
 
 <?php get_footer(); ?>

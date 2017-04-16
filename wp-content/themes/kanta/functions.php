@@ -277,7 +277,14 @@ require get_template_directory() . '/inc/walker.php';
  *
  *
  */
-
+## Обрезка заголовка
+function trim_title_chars($count, $after)
+{
+    $title = get_the_title();
+    if (mb_strlen($title) > $count) $title = mb_substr($title, 0, $count);
+    else $after = '';
+    echo $title . $after;
+}
 ## Изменение текста в подвале админ-панели
 add_filter('admin_footer_text', 'footer_admin_func');
 function footer_admin_func () {

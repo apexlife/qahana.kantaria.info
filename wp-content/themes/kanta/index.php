@@ -37,7 +37,6 @@
 
                 <nav class="page-navigation">
                     <?php if (function_exists('qahana_pagination')) qahana_pagination(); ?>
-
                 </nav>
             </section>
             <aside class="col-md-4 col-md-offset-1 al-main-aside">
