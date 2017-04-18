@@ -1,7 +1,6 @@
 <?php get_header(); ?>
     <main class="al-main-leaders-page">
         <div class="container-fluid">
-
             <?php /* Start the Loop */
             $ink_count = 0;
             $ink_row_count = 0 ?>
@@ -18,7 +17,7 @@
                         </div>
                         <figcaption class="al-radius">
                             <h3><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a></h3>
-                            <span><?php the_excerpt(); ?></span>
+                            <span><?php echo get_post_meta($post->ID, 'ageLeader', true); ?></span>
                         </figcaption>
                     </figure>
 

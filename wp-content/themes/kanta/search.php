@@ -1,6 +1,7 @@
 <?php get_header(); ?>
     <main class="al-main-news-page">
         <div class="container-fluid">
+
             <section class="col-md-7">
                 <?php
                 if(have_posts()):
@@ -13,6 +14,11 @@
                     endwhile;
                 endif;
                 ?>
+                <div class="col-xs-12">
+                    <nav class="page-navigation">
+                        <?php if (function_exists('qahana_pagination')) qahana_pagination(); ?>
+                    </nav>
+                </div>
             </section>
             <aside class="col-md-4 col-md-offset-1 al-main-aside">
                 <?php get_sidebar(); ?>

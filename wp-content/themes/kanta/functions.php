@@ -324,6 +324,7 @@ add_action('add_meta_boxes', 'my_extra_fields', 1);
 function my_extra_fields()
 {
     add_meta_box('extra_fields', 'Google Map', 'extra_fields_box_func', 'churches', 'normal', 'high');
+    add_meta_box('extra_fields', 'Age Leader', 'extra_fields_box_func_leaders', 'leaders', 'normal', 'high');
 
     global $post;
 
@@ -349,6 +350,14 @@ function extra_fields_box_func($post) { ?>
     <p>Add/Insert google maps iframe
         <textarea type="text" name="extra[description]"
                   style="width:100%;height:100px;resize:none;"><?php echo get_post_meta($post->ID, 'description', 1); ?></textarea>
+    </p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>"/>
+    <?php }
+function extra_fields_box_func_leaders($post) { ?>
+
+    <p>
+        <label for="ageLeader">Age Leader <input type="text" id="ageLeader" name="extra[ageLeader]" value="<?php echo get_post_meta($post->ID, 'ageLeader', 1); ?>"></label>
     </p>
 
     <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>"/>
