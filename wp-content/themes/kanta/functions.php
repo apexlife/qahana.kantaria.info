@@ -1,8 +1,8 @@
 <?php remove_action('wp_head', 'wp_generator'); ?>
 <?php
-add_filter('xmlrpc_enabled', '__return_false');
-remove_action('wp_head', 'rsd_link');
-remove_action('wp_head', 'wlwmanifest_link');
+    add_filter('xmlrpc_enabled', '__return_false');
+    remove_action('wp_head', 'rsd_link');
+    remove_action('wp_head', 'wlwmanifest_link');
 ?>
 <?php
 
@@ -39,7 +39,6 @@ function qahana_theme_setup()
     register_nav_menu('global', 'Global Page Navigation');
     register_nav_menu('footer', 'Footer Navigation');
 }
-
 add_action('init', 'qahana_theme_setup');
 
 /*
@@ -59,7 +58,6 @@ function example_customizer_menu()
 {
     add_theme_page('Customize', 'Customize', 'edit_theme_options');
 }
-
 add_action('admin_menu', 'example_customizer_menu');
 
 /*
@@ -118,16 +116,13 @@ function footer_text_customizer($wp_customize)
         )
     );
 }
-
 add_action('customize_register', 'footer_text_customizer');
-
 /*
  * Custom Post Type
  */
 function qahana_custom_post_type()
 {
-
-    $labels = array(
+    $labelsChurches = array(
         'name' => 'Churches',
         'singular_name' => 'Churches',
         'add_new' => 'Add New Churches',
@@ -141,8 +136,8 @@ function qahana_custom_post_type()
         'not_found_in_trash' => 'No Churches found in trash',
         'parent_item_colon' => 'Parent Churches'
     );
-    $args = array(
-        'labels' => $labels,
+    $argsChurches = array(
+        'labels' => $labelsChurches,
         'public' => true,
         'has_archive' => true,
         'publicly_queryable' => true,
@@ -161,7 +156,42 @@ function qahana_custom_post_type()
         'menu_position' => 5,
         'exclude_from_search' => false
     );
-    register_post_type('Churches', $args);
+    $labelsLeader = array(
+        'name' => 'Leaders',
+        'singular_name' => 'Leaders',
+        'add_new' => 'Add New Leaders',
+        'all_items' => 'All Leaders',
+        'add_new_item' => 'Add Leaders',
+        'edit_item' => 'Edit Leaders',
+        'new_item' => 'New Leaders',
+        'view_item' => 'View Leaders',
+        'search_item' => 'Search Leaders',
+        'not_found' => 'No Leaders found',
+        'not_found_in_trash' => 'No Leaders found in trash',
+        'parent_item_colon' => 'Parent Leaders'
+    );
+    $argsLeader = array(
+        'labels' => $labelsLeader,
+        'public' => true,
+        'has_archive' => true,
+        'publicly_queryable' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revisions',
+        ),
+        'taxonomies' => array('category', 'post_tag'),
+        'menu_position' => 5,
+        'exclude_from_search' => false
+    );
+    register_post_type('Churches', $argsChurches);
+    register_post_type('Leaders', $argsLeader);
 }
 
 add_action('init', 'qahana_custom_post_type');
@@ -289,11 +319,8 @@ require get_template_directory() . '/inc/walker.php';
  */
 // подключаем функцию активации мета блока (my_extra_fields)
 add_action('add_meta_boxes', 'my_extra_fields', 1);
-
-
 // подключаем функцию активации мета блока (my_extra_fields)
 add_action('add_meta_boxes', 'my_extra_fields', 1);
-
 function my_extra_fields()
 {
     add_meta_box('extra_fields', 'Google Map', 'extra_fields_box_func', 'churches', 'normal', 'high');
@@ -316,7 +343,6 @@ function my_extra_fields()
 
 //    add_meta_box( 'extra_fields', 'Google Map', 'extra_fields_box_func', 'contact', 'normal', 'high'  );
 }
-
 // код блока
 function extra_fields_box_func($post) { ?>
 
@@ -385,7 +411,6 @@ function trim_title_chars($count, $after)
     else $after = '';
     echo $title . $after;
 }
-
 ## Изменение текста в подвале админ-панели
 add_filter('admin_footer_text', 'footer_admin_func');
 function footer_admin_func()
@@ -660,7 +685,7 @@ function remove_menus()
     $restricted = array(
         //__('Dashboard'),
         //__('Posts'),
-        //__('Media'),
+        __('Media'),
         //__('Links'),
         //__('Pages'),
         //__('Appearance'),
