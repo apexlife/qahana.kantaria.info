@@ -123,18 +123,18 @@ add_action('customize_register', 'footer_text_customizer');
 function qahana_custom_post_type()
 {
     $labelsChurches = array(
-        'name' => 'Churches',
-        'singular_name' => 'Churches',
-        'add_new' => 'Add New Churches',
-        'all_items' => 'All Churches',
-        'add_new_item' => 'Add Churches',
-        'edit_item' => 'Edit Churches',
-        'new_item' => 'New Churches',
-        'view_item' => 'View Churches',
-        'search_item' => 'Search Churches',
-        'not_found' => 'No Churches found',
-        'not_found_in_trash' => 'No Churches found in trash',
-        'parent_item_colon' => 'Parent Churches'
+        'name' => 'Եկեղեցիներ',
+        'singular_name' => 'Եկեղեցիներ',
+        'add_new' => 'Add New Եկեղեցիներ',
+        'all_items' => 'All Եկեղեցիներ',
+        'add_new_item' => 'Add Եկեղեցիներ',
+        'edit_item' => 'Edit Եկեղեցիներ',
+        'new_item' => 'New Եկեղեցիներ',
+        'view_item' => 'View Եկեղեցիներ',
+        'search_item' => 'Search Եկեղեցիներ',
+        'not_found' => 'No Եկեղեցիներ found',
+        'not_found_in_trash' => 'No Եկեղեցիներ found in trash',
+        'parent_item_colon' => 'Parent Եկեղեցիներ'
     );
     $argsChurches = array(
         'labels' => $labelsChurches,
@@ -153,22 +153,22 @@ function qahana_custom_post_type()
             'revisions',
         ),
         'taxonomies' => array('category', 'post_tag'),
-        'menu_position' => 5,
+        'menu_position' => 4,
         'exclude_from_search' => false
     );
     $labelsLeader = array(
-        'name' => 'Leaders',
-        'singular_name' => 'Leaders',
-        'add_new' => 'Add New Leaders',
-        'all_items' => 'All Leaders',
-        'add_new_item' => 'Add Leaders',
-        'edit_item' => 'Edit Leaders',
-        'new_item' => 'New Leaders',
-        'view_item' => 'View Leaders',
-        'search_item' => 'Search Leaders',
-        'not_found' => 'No Leaders found',
-        'not_found_in_trash' => 'No Leaders found in trash',
-        'parent_item_colon' => 'Parent Leaders'
+        'name' => 'Կաթողիկոսներ',
+        'singular_name' => 'Կաթողիկոսներ',
+        'add_new' => 'Add New Կաթողիկոսներ',
+        'all_items' => 'All Կաթողիկոսներ',
+        'add_new_item' => 'Add Կաթողիկոսներ',
+        'edit_item' => 'Edit Կաթողիկոսներ',
+        'new_item' => 'New Կաթողիկոսներ',
+        'view_item' => 'View Կաթողիկոսներ',
+        'search_item' => 'Search Կաթողիկոսներ',
+        'not_found' => 'No Կաթողիկոսներ found',
+        'not_found_in_trash' => 'No Կաթողիկոսներ found in trash',
+        'parent_item_colon' => 'Parent Կաթողիկոսներ'
     );
     $argsLeader = array(
         'labels' => $labelsLeader,
@@ -190,8 +190,43 @@ function qahana_custom_post_type()
         'menu_position' => 5,
         'exclude_from_search' => false
     );
+    $labelsMedia = array(
+        'name' => 'Մեդիա',
+        'singular_name' => 'Մեդիա',
+        'add_new' => 'Add New Մեդիա',
+        'all_items' => 'All Մեդիա',
+        'add_new_item' => 'Add Մեդիա',
+        'edit_item' => 'Edit Մեդիա',
+        'new_item' => 'New Մեդիա',
+        'view_item' => 'View Մեդիա',
+        'search_item' => 'Search Մեդիա',
+        'not_found' => 'No Մեդիա found',
+        'not_found_in_trash' => 'No Media found in trash',
+        'parent_item_colon' => 'Parent Մեդիա'
+    );
+    $argsMedia = array(
+        'labels' => $labelsMedia,
+        'public' => true,
+        'has_archive' => true,
+        'publicly_queryable' => true,
+        'query_var' => true,
+        'rewrite' => true,
+        'capability_type' => 'post',
+        'hierarchical' => false,
+        'supports' => array(
+            'title',
+            'editor',
+            'excerpt',
+            'thumbnail',
+            'revisions',
+        ),
+        'taxonomies' => array('category', 'post_tag'),
+        'menu_position' => 6,
+        'exclude_from_search' => false
+    );
     register_post_type('Churches', $argsChurches);
     register_post_type('Leaders', $argsLeader);
+    register_post_type('Media', $argsMedia);
 }
 
 add_action('init', 'qahana_custom_post_type');
