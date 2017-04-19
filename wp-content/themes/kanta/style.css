@@ -10287,23 +10287,24 @@ main.al-main-media #media-tab-videos section.al-playlist figure {
 main.al-main-media #media-tab-videos section.al-playlist figure div {
   position: relative;
   height: 160px;
+  overflow: hidden;
 }
-/* line 17, assets/sass/_media.scss */
+/* line 18, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist figure div:hover span {
   visibility: hidden;
   opacity: 0;
 }
-/* line 21, assets/sass/_media.scss */
+/* line 22, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist figure div:hover:before {
   visibility: visible;
   opacity: 1;
 }
-/* line 25, assets/sass/_media.scss */
+/* line 26, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist figure div:hover .al-play {
   visibility: visible;
   opacity: 1;
 }
-/* line 32, assets/sass/_media.scss */
+/* line 33, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist figure div:before {
   content: '';
   position: absolute;
@@ -10321,7 +10322,7 @@ main.al-main-media #media-tab-videos section.al-playlist figure div:before {
   -ms-border-radius: 8px;
   border-radius: 8px;
 }
-/* line 46, assets/sass/_media.scss */
+/* line 47, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist figure div span {
   min-width: 94px;
   height: 40px;
@@ -10330,7 +10331,6 @@ main.al-main-media #media-tab-videos section.al-playlist figure div span {
   position: absolute;
   bottom: 0;
   left: 0;
-  padding: 0 10px;
   background-color: rgba(0, 0, 0, 0.7);
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
@@ -10339,14 +10339,31 @@ main.al-main-media #media-tab-videos section.al-playlist figure div span {
   font-size: 17px;
   font-weight: 500;
   transition: all 0.5s ease;
+  padding-left: 40px;
+  padding-top: 9px;
 }
-/* line 63, assets/sass/_media.scss */
+/* line 65, assets/sass/_media.scss */
+main.al-main-media #media-tab-videos section.al-playlist figure div span:before {
+  content: '';
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  display: inline-block;
+  background: url(assets/img/sprite.png) no-repeat;
+  background-position: -29px -224px;
+  overflow: hidden;
+  text-indent: -9999px;
+  text-align: left;
+  top: 7px;
+  left: 7px;
+}
+/* line 79, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist figure div span i {
   position: relative;
   top: 6px;
   margin-right: 10px;
 }
-/* line 69, assets/sass/_media.scss */
+/* line 85, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist figure div img {
   position: absolute;
   top: 0;
@@ -10356,7 +10373,7 @@ main.al-main-media #media-tab-videos section.al-playlist figure div img {
   height: 100%;
   object-fit: cover;
 }
-/* line 78, assets/sass/_media.scss */
+/* line 94, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist figure div .al-play {
   position: absolute;
   z-index: 3;
@@ -10368,11 +10385,11 @@ main.al-main-media #media-tab-videos section.al-playlist figure div .al-play {
   opacity: 0;
   transition: all 0.5s ease;
 }
-/* line 90, assets/sass/_media.scss */
+/* line 106, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist figure figcaption {
   margin: 15px 0 6px;
 }
-/* line 92, assets/sass/_media.scss */
+/* line 108, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist figure figcaption a {
   line-height: 26px;
   font-size: 21px;
@@ -10380,15 +10397,15 @@ main.al-main-media #media-tab-videos section.al-playlist figure figcaption a {
   transition: all 0.5s ease;
   color: #000000;
 }
-/* line 98, assets/sass/_media.scss */
+/* line 114, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist figure figcaption a:hover {
   color: #1c88d4;
 }
-/* line 104, assets/sass/_media.scss */
+/* line 120, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist .show-all {
   text-align: center;
 }
-/* line 106, assets/sass/_media.scss */
+/* line 122, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist .show-all a {
   display: inline-block;
   background-color: #1c88d4;
@@ -10398,30 +10415,30 @@ main.al-main-media #media-tab-videos section.al-playlist .show-all a {
   padding: 11px 38px;
   transition: all 0.5s ease;
 }
-/* line 114, assets/sass/_media.scss */
+/* line 130, assets/sass/_media.scss */
 main.al-main-media #media-tab-videos section.al-playlist .show-all a:hover {
   background-color: #6bb6eb;
 }
-/* line 123, assets/sass/_media.scss */
+/* line 139, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .al-main-title {
   font-size: 36px;
   color: #000000;
   margin: 20px 0 25px;
 }
-/* line 128, assets/sass/_media.scss */
+/* line 144, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .al-st {
   margin-bottom: 42px;
 }
-/* line 132, assets/sass/_media.scss */
+/* line 148, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper {
   position: relative;
 }
-/* line 134, assets/sass/_media.scss */
+/* line 150, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper .al-link-img {
   height: 255px;
   display: inline-block;
 }
-/* line 137, assets/sass/_media.scss */
+/* line 153, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper .al-link-img:before {
   content: '';
   position: absolute;
@@ -10442,13 +10459,13 @@ main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper 
   -webkit-background-clip: padding;
   background-clip: padding-box;
 }
-/* line 153, assets/sass/_media.scss */
+/* line 169, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-/* line 158, assets/sass/_media.scss */
+/* line 174, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper span.al-left-bottom-ic {
   display: inline-block;
   position: absolute;
@@ -10462,11 +10479,11 @@ main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper 
   box-sizing: border-box;
   border-bottom-left-radius: 8px;
 }
-/* line 170, assets/sass/_media.scss */
+/* line 186, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper span.al-left-bottom-ic i {
   vertical-align: middle;
 }
-/* line 174, assets/sass/_media.scss */
+/* line 190, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper .main-content {
   position: absolute;
   display: inline-block;
@@ -10474,32 +10491,32 @@ main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper 
   z-index: 10;
   margin-left: 95px;
 }
-/* line 180, assets/sass/_media.scss */
+/* line 196, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper .main-content p {
   color: #ffffff;
   font-size: 30px;
   line-height: 26px;
 }
-/* line 185, assets/sass/_media.scss */
+/* line 201, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-8 .al-large-wrapper .main-content .al-date-and-views {
   margin-top: 10px;
   color: #ffffff;
   display: block;
   cursor: pointer;
 }
-/* line 195, assets/sass/_media.scss */
+/* line 211, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-4 .al-wrapper {
   position: relative;
   height: 160px;
   margin-bottom: 18px;
 }
-/* line 198, assets/sass/_media.scss */
+/* line 214, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-4 .al-wrapper img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
-/* line 203, assets/sass/_media.scss */
+/* line 219, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-4 .al-wrapper span.al-left-bottom-ic {
   display: inline-block;
   position: absolute;
@@ -10512,11 +10529,11 @@ main.al-main-media #media-tab-photo .al-photo-album .col-md-4 .al-wrapper span.a
   box-sizing: border-box;
   border-bottom-left-radius: 8px;
 }
-/* line 214, assets/sass/_media.scss */
+/* line 230, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-4 .al-wrapper span.al-left-bottom-ic i {
   vertical-align: middle;
 }
-/* line 220, assets/sass/_media.scss */
+/* line 236, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-4 a {
   font-size: 21px;
   line-height: 26px;
@@ -10524,20 +10541,20 @@ main.al-main-media #media-tab-photo .al-photo-album .col-md-4 a {
   color: #000;
   transition: all 0.5s ease;
 }
-/* line 226, assets/sass/_media.scss */
+/* line 242, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-4 a:hover {
   color: #1c88d4;
 }
-/* line 230, assets/sass/_media.scss */
+/* line 246, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .col-md-4 .al-date-and-views {
   margin-top: 6px;
 }
-/* line 234, assets/sass/_media.scss */
+/* line 250, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .al-arrows-holder {
   text-align: center;
   margin-bottom: 30px;
 }
-/* line 237, assets/sass/_media.scss */
+/* line 253, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .al-arrows-holder span {
   display: inline-block;
   background-color: #1c88d4;
@@ -10545,19 +10562,19 @@ main.al-main-media #media-tab-photo .al-photo-album .al-arrows-holder span {
   cursor: pointer;
   transition: all 0.5s ease;
 }
-/* line 243, assets/sass/_media.scss */
+/* line 259, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .al-arrows-holder span:hover {
   background-color: #6bb6eb;
 }
-/* line 246, assets/sass/_media.scss */
+/* line 262, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .al-arrows-holder span i {
   vertical-align: middle;
 }
-/* line 249, assets/sass/_media.scss */
+/* line 265, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-photo-album .al-arrows-holder span:first-of-type {
   margin-right: 16px;
 }
-/* line 255, assets/sass/_media.scss */
+/* line 271, assets/sass/_media.scss */
 main.al-main-media #media-tab-photo .al-change {
   margin-top: 25px;
 }

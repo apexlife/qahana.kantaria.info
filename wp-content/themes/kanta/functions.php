@@ -152,7 +152,7 @@ function qahana_custom_post_type()
             'thumbnail',
             'revisions',
         ),
-        'taxonomies' => array('category', 'post_tag'),
+        //'taxonomies' => array('category', 'post_tag'),
         'menu_position' => 4,
         'exclude_from_search' => false
     );
@@ -186,7 +186,7 @@ function qahana_custom_post_type()
             'thumbnail',
             'revisions',
         ),
-        'taxonomies' => array('category', 'post_tag'),
+        //'taxonomies' => array('category', 'post_tag'),
         'menu_position' => 5,
         'exclude_from_search' => false
     );
@@ -220,16 +220,68 @@ function qahana_custom_post_type()
             'thumbnail',
             'revisions',
         ),
-        'taxonomies' => array('category', 'post_tag'),
+        //'taxonomies' => array('category', 'post_tag'),
         'menu_position' => 6,
         'exclude_from_search' => false
     );
-    register_post_type('Churches', $argsChurches);
-    register_post_type('Leaders', $argsLeader);
-    register_post_type('Media', $argsMedia);
+    register_post_type('churches', $argsChurches);
+    register_post_type('leaders', $argsLeader);
+    register_post_type('media', $argsMedia);
 }
 
 add_action('init', 'qahana_custom_post_type');
+/*
+ * Create Churches Taxonomy
+*/
+function qahana_custom_taxonomies() {
+
+    //add new taxonomy hierarchical
+    $labels = array(
+        'name' => 'Fields',
+        'singular_name' => 'Field',
+        'search_items' => 'Search Fields',
+        'all_items' => 'All Fields',
+        'parent_item' => 'Parent Field',
+        'parent_item_colon' => 'Parent Field:',
+        'edit_item' => 'Edit Field',
+        'update_item' => 'Update Field',
+        'add_new_item' => 'Add New Work Field',
+        'new_item_name' => 'New Field Name',
+        'menu_name' => 'Fields'
+    );
+    $args = array(
+        'hierarchical' => true,
+        'labels' => $labels,
+        'show_ui' => true,
+        'show_admin_column' => true,
+        'query_var' => true,
+        'rewrite' => array( 'slug' => 'field' )
+    );
+
+    register_taxonomy('field', array('churches'), $args);
+    register_taxonomy('field', array('leaders'), $args);
+    register_taxonomy('field', array('media'), $args);
+
+    //add new taxonomy NOT hierarchical
+
+    register_taxonomy('churches', 'churches', array(
+        'label' => 'Categories',
+        'rewrite' => array( 'slug' => 'Section' ),
+        'hierarchical' => false
+    ) );
+    register_taxonomy('leaders', 'leaders', array(
+        'label' => 'Categories',
+        'rewrite' => array( 'slug' => 'Section' ),
+        'hierarchical' => false
+    ) );
+    register_taxonomy('media', 'media', array(
+        'label' => 'Categories',
+        'rewrite' => array( 'slug' => 'Section' ),
+        'hierarchical' => false
+    ) );
+
+}
+add_action( 'init' , 'qahana_custom_taxonomies' );
 
 /*
  * Sidebar function
@@ -360,6 +412,7 @@ function my_extra_fields()
 {
     add_meta_box('extra_fields', 'Google Map', 'extra_fields_box_func', 'churches', 'normal', 'high');
     add_meta_box('extra_fields', 'Age Leader', 'extra_fields_box_func_leaders', 'leaders', 'normal', 'high');
+    add_meta_box('extra_fields', 'Youtube', 'extra_fields_box_func_media', 'media', 'normal', 'high');
 
     global $post;
 
@@ -393,6 +446,14 @@ function extra_fields_box_func_leaders($post) { ?>
 
     <p>
         <label for="ageLeader">Age Leader <input type="text" id="ageLeader" name="extra[ageLeader]" value="<?php echo get_post_meta($post->ID, 'ageLeader', 1); ?>"></label>
+    </p>
+
+    <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>"/>
+    <?php }
+function extra_fields_box_func_media($post) { ?>
+
+    <p>
+        <label for="youtube">Insert youtube id<input style="width: 100%;" type="text" id="youtube" name="extra[youtube]" value="<?php echo get_post_meta($post->ID, 'youtube', 1); ?>"></label>
     </p>
 
     <input type="hidden" name="extra_fields_nonce" value="<?php echo wp_create_nonce(__FILE__); ?>"/>

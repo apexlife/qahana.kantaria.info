@@ -13,6 +13,7 @@ main.al-main-media{
           div{
             position: relative;
             height: 160px;
+            overflow: hidden;
             &:hover{
                 span{
                   visibility: hidden;
@@ -51,7 +52,6 @@ main.al-main-media{
               position: absolute;
               bottom: 0;
               left: 0;
-              padding: 0 10px;
               background-color: rgba($b, 0.7);
               -webkit-box-sizing: border-box;
               -moz-box-sizing: border-box;
@@ -60,6 +60,22 @@ main.al-main-media{
               font-size: 17px;
               font-weight: 500;
               transition: all 0.5s ease;
+              padding-left: 40px;
+              padding-top: 9px;
+              &:before {
+                content: '';
+                position: absolute;
+                width: 26px;
+                height: 26px;
+                display: inline-block;
+                background: url(assets/img/sprite.png) no-repeat;
+                background-position: -29px -224px;
+                overflow: hidden;
+                text-indent: -9999px;
+                text-align: left;
+                top: 7px;
+                left: 7px;
+              }
               i{
                 position: relative;
                 top: 6px;
@@ -257,3 +273,4 @@ main.al-main-media{
     }
   }
 }
+

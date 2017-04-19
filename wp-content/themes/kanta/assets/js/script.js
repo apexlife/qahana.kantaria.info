@@ -249,4 +249,11 @@ $(document).ready(function(){
 });
 
 
+var check = 1;
+jQuery(document).on('click', '.al-play', function(){
+    $( this ).prev().prev( ".video-image" ).css( "display", "none" );
+    var src = $( this ).prev("iframe").attr('src');
+    $( this ).next(".time").css('display','none');
+    $( this ).prev("iframe").attr('src', src + '&autoplay=1');
+});
 
