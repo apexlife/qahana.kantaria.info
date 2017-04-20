@@ -44,7 +44,13 @@
         </div>
     </div>
 </header>
-<nav id="al-library-navbar" class="navbar navbar-default">
+<nav  id="<?php
+if ( is_front_page() ) {
+} else {
+    echo'al-library-navbar';
+}
+
+?>" class="navbar navbar-default">
     <div class="container-fluid">
         <div class="col-md-12 al-border-bottom">
             <div class="navbar-header">
@@ -55,7 +61,7 @@
                     <span class="icon-bar"></span>
                 </button>
             </div>
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <div class="collapse navbar-collapse">
                 <?php
                 wp_nav_menu(array(
                         'theme_location' => 'home',
@@ -65,10 +71,19 @@
                     )
                 );
                 ?>
+                <?php
+                if ( is_front_page() ) {
+                } else {
+                    ?>
                 <div class="col-md-3 pull-right al-news-search-box">
                     <?php get_search_form(); ?>
                     <a href="" class="al-fc-news-black"></a>
                 </div>
+                <?php
+                }
+
+                ?>
+
             </div>
         </div>
     </div>
